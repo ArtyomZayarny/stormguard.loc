@@ -6,7 +6,7 @@ Template:   twentynineteen
 */
 
 @import url('../twentynineteen/style.css');
-
-h2{
-    color:red;
-}
+@import '../twentynineteen-child/scss/vars';
+@import '../twentynineteen-child/scss/typography';
+@import '../twentynineteen-child/scss/global';
+@import '../twentynineteen-child/scss/header';

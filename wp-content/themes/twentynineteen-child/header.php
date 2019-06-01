@@ -20,8 +20,17 @@
 </head>
 
 <body>
-		<header class="header">
+	<header class="header">
+		<div class="header-top" style="background-color:#000">
+			<div class="container">
+					<div class="header-top header-top__content">
+						<a href="#" class="header-top__content__button">Find Your Local Storm Guard! </a>
+						<?php wp_nav_menu( array( 'theme_location' => 'top-bar','container' => 'ul' ) ); ?>
+					</div>		
+			</div>
+		</div><!-- #header__top -->
+		<div class="header__bottom">
+			<div class="container"></div>
+		</div><!--
 		
-		    
-		
-		</header>
+	</header>

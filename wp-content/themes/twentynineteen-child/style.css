@@ -5,7 +5,100 @@ Template:   twentynineteen
 
 */
 @import url("../twentynineteen/style.css");
-h2 {
-  color: red;
+/******************* COLORS ***************************/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-top__content {
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.header-top__content__button {
+  display: inline-block;
+  position: relative;
+  color: #f1d000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-top__content__button:after {
+  content: '';
+  background: url("/wp-content/uploads/2019/06/topbar_arrow.png") no-repeat center;
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+
+.header-top__content__button:hover {
+  color: #f1d000;
+}
+
+.header-top__content ul.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-top__content ul.menu li {
+  display: block;
+}
+
+.header-top__content ul.menu li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.header-top__content ul.menu li a:hover {
+  color: #f1d000;
+}
+
+.header-top__content ul.menu li:first-child a {
+  padding-left: 0;
+}
+
+.header-top__content ul.menu li:last-child a {
+  padding-right: 0;
 }
 /*# sourceMappingURL=style.css.map */

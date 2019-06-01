@@ -1,0 +1,56 @@
+.header{
+    
+    &-top{
+        &__content{
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            &__button{
+                display: inline-block;
+                position: relative;
+                color:$yellow;
+                font-size:16px;
+                font-weight: 700;
+                &:after{
+                    content:'';
+                    background: url('/wp-content/uploads/2019/06/topbar_arrow.png')no-repeat center;
+                    position: relative;
+                    display: inline-block;
+                    width: 10px;
+                    height:10px;
+
+                }
+               &:hover{
+                   color:$yellow;
+               }
+               }
+       ul.menu{
+        display: flex;
+        li{
+            display: block;
+            a{  
+                display: inline-block;
+                color:$white;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 0 10px;
+                
+                &:hover{
+                    color:$yellow;
+                }
+                
+            }
+            &:first-child a{
+                padding-left: 0;
+            }
+            &:last-child a{
+                padding-right: 0;
+            }
+        }
+            }
+        }
+    }
+    &__bottom{
+
+    }
+}
