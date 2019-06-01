@@ -17,7 +17,8 @@ function register_my_menus() {
     register_nav_menus(
       array(
         'top-bar' => __( 'top-bar' ),
-        'main-nav' => __( 'main-nav' )
+        'main-nav' => __( 'main-nav' ),
+        'footer-menu' =>__('footer-menu')
       )
     );
   }

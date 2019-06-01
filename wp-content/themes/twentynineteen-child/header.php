@@ -35,10 +35,9 @@
 			    <div class="header-bottom__content header-bottom__content__img">
 				   <img src="/wp-content/uploads/2019/06/logo.png" alt="logo">
 				</div>
-			
+				<!-- main-nav menu -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
-				
-			
+			     <!-- #main-nav-menu -->
 			</div>
 			
 			</div>

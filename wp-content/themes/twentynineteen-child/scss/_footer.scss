@@ -1,0 +1,31 @@
+.footer{
+
+    &-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      color:$white;
+      font-size: 12px;
+      font-weight: 400;
+      a{  color:$white;
+          text-decoration: underline;
+ 
+      }
+   ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    li{
+        a{
+            padding: 0 10px
+        }
+        &:fisrt-child a{
+            padding-left: 0;
+        }
+        &:last-child a{
+            padding-right:0;
+        }
+    }
+   }
+
+    }
+}
