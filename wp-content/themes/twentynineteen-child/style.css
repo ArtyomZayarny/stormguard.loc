@@ -1,0 +1,11 @@
+/*
+
+Theme Name: twentynineteen-child
+Template:   twentynineteen
+
+*/
+@import url("../twentynineteen/style.css");
+h2 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
