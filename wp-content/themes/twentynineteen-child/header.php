@@ -29,8 +29,19 @@
 					</div>		
 			</div>
 		</div><!-- #header__top -->
-		<div class="header__bottom">
-			<div class="container"></div>
+		<div class="header-bottom" style="background-color:rgba(0,0,0,0.6);">
+			<div class="container">
+			<div class="header-bottom__content">
+			    <div class="header-bottom__content header-bottom__content__img">
+				   <img src="/wp-content/uploads/2019/06/logo.png" alt="logo">
+				</div>
+			
+				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
+				
+			
+			</div>
+			
+			</div>
 		</div><!--
 		
 	</header>
