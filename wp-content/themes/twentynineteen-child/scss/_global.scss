@@ -25,3 +25,12 @@ a{
     max-width: 1200px;
     margin:0 auto;
 }
+
+/****************   YELLOW BUTTON *******************/
+.yellow-btn {
+    display: inline-block;
+    background-color: yellow;
+    color: $black;
+    font-size:17px;
+    font-weight: 700;
+}

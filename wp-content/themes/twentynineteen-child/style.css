@@ -43,6 +43,19 @@ a {
   margin: 0 auto;
 }
 
+/****************   YELLOW BUTTON *******************/
+.yellow-btn {
+  display: inline-block;
+  background-color: yellow;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.header {
+  position: relative;
+}
+
 .header-top__content {
   padding: 20px 0;
   display: -ms-grid;
@@ -146,6 +159,72 @@ a {
 
 .header-bottom__content ul li:last-child a {
   padding-right: 0;
+}
+
+.banner-section {
+  min-height: 590px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -89px;
+}
+
+.banner-section .banner-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 588px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 43px 20px 30px 20px;
+}
+
+.banner-section .banner-content__text {
+  padding-bottom: 27px;
+  width: 100%;
+  max-width: 485px;
+}
+
+.banner-section .banner-content__text h3 {
+  color: #fff;
+  font-size: 34px;
+}
+
+.banner-section .banner-content .yellow-btn {
+  padding: 20px 25px;
+}
+
+.banner-section .banner-content .yellow-btn span {
+  display: block;
+}
+
+.banner-section .banner-content .yellow-btn span:after {
+  content: '';
+  display: inline-block;
+  background: url("/wp-content/uploads/2019/06/btn-arrow.png") no-repeat center;
+  background-size: cover;
+  width: 7px;
+  height: 10px;
+  margin-left: 15px;
+}
+
+.banner-section .banner-content .yellow-btn:hover {
+  background-color: #ffe125;
+  color: #000;
+}
+
+.banner-section .banner-content .yellow-btn:hover span {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.banner-section .banner-content .yellow-btn:hover span:after {
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 .footer-content {

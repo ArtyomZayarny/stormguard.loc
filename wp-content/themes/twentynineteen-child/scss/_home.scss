@@ -1,0 +1,52 @@
+.banner-section{
+        min-height: 590px;
+        display: flex;
+        align-items: center;
+        margin-top: -89px;
+    .banner-content{
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 588px;
+        background-color: rgba(0,0,0,0.6);
+        padding: 43px 20px 30px 20px;
+             &__text{
+                 padding-bottom: 27px;
+                 width: 100%;
+                 max-width: 485px;
+                 h3{
+                     color:$white;
+                     font-size:34px;
+                 }
+             }
+        .yellow-btn{
+
+            padding: 20px 25px;
+            span{
+                display: block;
+               &:after{
+                content:'';
+                display:inline-block;
+                background: url('/wp-content/uploads/2019/06/btn-arrow.png')no-repeat center;
+                background-size: cover;
+                width:7px;
+                height:10px;
+                margin-left: 15px;
+            }
+          }
+
+          &:hover{
+              background-color: lighten($yellow, 10%);
+              color:$black;
+              span{
+                  transition: all .4s ease; 
+                  &:after{
+                    transition: all .4s ease; 
+                    transform: translateX(5px);
+                  }
+              }
+          }
+        }
+    }
+    
+}
