@@ -33,7 +33,7 @@
 			<div class="container">
 			<div class="header-bottom__content">
 			    <div class="header-bottom__content header-bottom__content__img">
-				   <img src="/wp-content/uploads/2019/06/logo.png" alt="logo">
+				   <a href="/"><img src="/wp-content/uploads/2019/06/logo.png" alt="logo"></a>
 				</div>
 				<!-- main-nav menu -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>

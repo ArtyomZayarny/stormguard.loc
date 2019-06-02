@@ -17,7 +17,11 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+form p {
   margin: 0;
 }
 
@@ -50,6 +54,11 @@ a {
   color: #000;
   font-size: 17px;
   font-weight: 700;
+}
+
+/***************** SPAN YELLOW **********************/
+.yellow {
+  color: #f1d000;
 }
 
 .header {
@@ -169,7 +178,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -89px;
+  margin-top: -97px;
 }
 
 .banner-section .banner-content {
@@ -189,11 +198,15 @@ a {
 
 .banner-section .banner-content__text h3 {
   color: #fff;
-  font-size: 34px;
+  font-size: 37px;
 }
 
 .banner-section .banner-content .yellow-btn {
   padding: 20px 25px;
+}
+
+.banner-section .banner-content .yellow-btn:visited {
+  color: #000;
 }
 
 .banner-section .banner-content .yellow-btn span {
@@ -225,6 +238,66 @@ a {
   transition: all .4s ease;
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
+}
+
+.find-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 38px 0;
+}
+
+.find-content__icon {
+  margin-left: 27px;
+}
+
+.find-content__text {
+  padding: 0 15px;
+}
+
+.find-content__text h4 {
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.find-content__text p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.find-content .find-input {
+  width: 100%;
+  width: 259px;
+  font-size: 18px;
+  padding: 10px 15px;
+  outline: none;
+  font-family: "Lato";
+  border: 1px solid #b7b7b7;
+  outline: none;
+}
+
+.find-content .find-input:focus {
+  border-color: #b7b7b7;
+}
+
+.find-content .find-submit {
+  padding: 16px 38px;
+  border-radius: unset;
+  font-size: 18px;
+  color: #ffffff;
+  height: 54px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.find-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer-content {

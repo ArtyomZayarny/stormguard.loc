@@ -2,7 +2,7 @@
         min-height: 590px;
         display: flex;
         align-items: center;
-        margin-top: -89px;
+        margin-top: -97px;
     .banner-content{
         position: relative;
         z-index: 1;
@@ -16,12 +16,14 @@
                  max-width: 485px;
                  h3{
                      color:$white;
-                     font-size:34px;
+                     font-size:37px;
                  }
              }
         .yellow-btn{
-
             padding: 20px 25px;
+            &:visited{
+                color:$black;
+            }
             span{
                 display: block;
                &:after{
@@ -49,4 +51,52 @@
         }
     }
     
+}
+.find{
+
+    &-content{
+        display: flex;
+        align-items: center;
+        padding: 38px 0;
+        &__icon{
+            margin-left:27px;
+        }
+        &__text{
+            padding: 0 15px;
+            h4{
+                font-size: 38px;
+                font-weight:400;
+            }
+            p{
+                font-size:16px;
+                font-weight:700;
+            }
+        }
+        .find-input{
+            width: 100%;
+            width: 259px;
+            font-size: 18px;
+            padding:10px 15px;
+            outline: none;
+            font-family: "Lato";
+            border: 1px solid #b7b7b7;
+            outline:none;
+            &:focus{ 
+                border-color:#b7b7b7;   
+            }
+        }
+        .find-submit {
+            padding: 16px 38px;
+            border-radius: unset;
+            font-size: 18px;
+            color: #ffffff;
+            height: 54px;
+            margin-left: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        form{
+            display:flex;
+        }
+    }
 }
