@@ -21,9 +21,6 @@
              }
         .yellow-btn{
             padding: 20px 25px;
-            &:visited{
-                color:$black;
-            }
             span{
                 display: block;
                &:after{
@@ -38,7 +35,6 @@
           }
 
           &:hover{
-              background-color: lighten($yellow, 10%);
               color:$black;
               span{
                   transition: all .4s ease; 
@@ -98,5 +94,34 @@
         form{
             display:flex;
         }
+    }
+}
+.offers{
+    &-content{
+        text-align: center;
+    }
+    &-box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-bottom: 40px;
+        grid-gap: 50px 15px;
+        &-item{
+            display: grid;
+            text-align: center;
+            &__circle{
+                justify-self: center;
+                width: 84px;
+                height:84px;
+                border-radius: 50px;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+            }
+        }
+    }
+    .yellow-btn{
+        font-size:16px;
+        font-weight:700;
+        padding: 20px 54px;
     }
 }

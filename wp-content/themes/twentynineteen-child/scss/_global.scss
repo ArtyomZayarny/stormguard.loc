@@ -1,9 +1,10 @@
 *{
     box-sizing: border-box;
 }
-body{
+body,p{
     font-family: 'Lato', sans-serif;
     font-size:16px;
+    line-height: 23px;
 }
 h1,h2,h3,h4,h5,h6,p{
     margin: 0;
@@ -11,6 +12,7 @@ h1,h2,h3,h4,h5,h6,p{
 form p{
     margin: 0;
 }
+
 ul{
     padding: 0;
     margin: 0;
@@ -22,11 +24,17 @@ a{
     text-decoration: none;
     color:$black;
     transition:all .3s ease;
+    &:visited{
+        color:$black;
+    }
 }
 .container{
     width: 100%;
     max-width: 1200px;
     margin:0 auto;
+}
+section{
+    padding:40px 0;
 }
 
 /****************   YELLOW BUTTON *******************/
@@ -36,8 +44,26 @@ a{
     color: $black;
     font-size:17px;
     font-weight: 700;
+    transition: all .3s ease;
+    &:hover{
+        background-color: lighten($yellow, 10%);
+    }
 }
 /***************** SPAN YELLOW **********************/
 .yellow{
     color:$yellow;
 }
+
+/********************* SECTIONS HEADINGS container **************/
+.heading{
+    max-width: 439px;
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom: 40px;
+    h4{
+        color: #db302c;
+        font-size: 28px;
+        font-weight: 400;
+    }
+} 

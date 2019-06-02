@@ -36,6 +36,48 @@ Template Name: Home page template
         </div>
     </div>
 </section>
+<section class="offers">
+    <div class="container">
+        <div class="offers-content">
+            <div class="heading">
+                <h4><?php echo get_field('services-title'); ?></h4>
+                <?php echo get_field('services-desc'); ?>
+            </div>
+            <div class="offers-box">
+            <?php
+            global $post;
+
+            $query = new WP_Query( [
+                'post_type'      =>'servicess',
+                'posts_per_page' => 6,
+                'orderby'        => 'comment_count',
+            ] );
+            
+            if ( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                    ?>
+                    <div class="offers-box-item"> 
+                        <div class='offers-box-item__circle' style="background-color:#db302c;">
+                            <img src="<?php echo $url ?>" /> 
+                        </div>
+                        <h3><?php echo get_the_title();?></h3>
+                        <?php the_excerpt(); ?>
+                    </div><!-- #offers-item -->
+                    <?php 
+                }
+            } else {
+                // Постов не найдено
+            }
+            
+            wp_reset_postdata(); // Сбрасываем $post
+            ?>
+            </div><!-- #offers-box -->
+            <a href="#" class="yellow-btn">View All Services</a>
+        </div>
+    </div>
+</section>
 
 
 
