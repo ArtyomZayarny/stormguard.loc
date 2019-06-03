@@ -21,18 +21,7 @@
              }
         .yellow-btn{
             padding: 20px 25px;
-            span{
-                display: block;
-               &:after{
-                content:'';
-                display:inline-block;
-                background: url('/wp-content/uploads/2019/06/btn-arrow.png')no-repeat center;
-                background-size: cover;
-                width:7px;
-                height:10px;
-                margin-left: 15px;
-            }
-          }
+          
 
           &:hover{
               color:$black;
@@ -123,5 +112,38 @@
         font-size:16px;
         font-weight:700;
         padding: 20px 54px;
+    }
+}
+.get-start{
+
+    &-content{
+        .get-start-box {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 0 23px;
+            &-item{
+                &__img{
+                    max-height: 205px;
+                    overflow: hidden;
+                }
+                p.text-with-arrow {
+                    padding: 9px 18px;
+                    background: $yellow;
+                    width: 100%;
+                    font-size: 20px;
+                }
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 244px;
+                p{
+                    position:absolute;
+                    left:0;
+                    bottom:0;
+                }
+    
+            }
+        }
+        
     }
 }

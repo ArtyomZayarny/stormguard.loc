@@ -13,7 +13,7 @@ Template Name: Home page template
                 <?php echo get_field('banner-text'); ?>
            </div>
             <a href="#" class="yellow-btn">
-                <span>Contact Us Today</span>
+                <span class="text-with-arrow">Contact Us Today</span>
             </a>
        </div>
     </div>
@@ -75,6 +75,47 @@ Template Name: Home page template
             ?>
             </div><!-- #offers-box -->
             <a href="#" class="yellow-btn">View All Services</a>
+        </div>
+    </div>
+</section>
+<section class="get-start">
+    <div class="container">
+        <div class="get-start-content">
+            <div class="heading">
+                <h4><?php echo get_field('get-start-title'); ?></h4>
+                <?php echo get_field('get-start-desc'); ?>
+            </div>
+            <div class="get-start-box">
+                <a href="#">
+                    <div class="get-start-box-item">
+                        <div class="get-start-box-item__img">
+                            <img src="<?php  echo get_field('get-start-first-item-img'); ?>" alt="">
+                        </div>
+                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-first-item-desc'); ?></p>
+                    </div>
+                 </a>
+                 <!-- #first item -->
+                 <a href="#">
+                    <div class="get-start-box-item">
+                        <div class="get-start-box-item__img">
+                            <img src="<?php  echo get_field('get-start-second-item-img'); ?>" alt="">
+                        </div>
+                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-second-item-desc'); ?></p>
+                    </div>
+                 </a>
+                 <!-- #first second -->
+                 <a href="#">
+                    <div class="get-start-box-item">
+                        <div class="get-start-box-item__img">
+                            <img src="<?php  echo get_field('get-start-third-item-img'); ?>" alt="">
+                        </div>
+                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-third-item-desc'); ?></p>
+                    </div>
+                 </a>
+                 <!-- #third item -->
+                 
+            
+            </div>
         </div>
     </div>
 </section>

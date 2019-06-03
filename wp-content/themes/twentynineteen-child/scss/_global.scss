@@ -24,7 +24,7 @@ a{
     text-decoration: none;
     color:$black;
     transition:all .3s ease;
-    &:visited{
+    &:visited, &:hover{
         color:$black;
     }
 }
@@ -35,6 +35,18 @@ a{
 }
 section{
     padding:40px 0;
+}
+.text-with-arrow{
+    display: block;
+    &:after{
+        content:'';
+        display:inline-block;
+        background: url('/wp-content/uploads/2019/06/btn-arrow.png')no-repeat center;
+        background-size: cover;
+        width:7px;
+        height:10px;
+        margin-left: 15px;
+    }
 }
 
 /****************   YELLOW BUTTON *******************/

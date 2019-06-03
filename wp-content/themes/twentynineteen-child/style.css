@@ -42,7 +42,7 @@ a {
   transition: all .3s ease;
 }
 
-a:visited {
+a:visited, a:hover {
   color: #000;
 }
 
@@ -54,6 +54,20 @@ a:visited {
 
 section {
   padding: 40px 0;
+}
+
+.text-with-arrow {
+  display: block;
+}
+
+.text-with-arrow:after {
+  content: '';
+  display: inline-block;
+  background: url("/wp-content/uploads/2019/06/btn-arrow.png") no-repeat center;
+  background-size: cover;
+  width: 7px;
+  height: 10px;
+  margin-left: 15px;
 }
 
 /****************   YELLOW BUTTON *******************/
@@ -235,20 +249,6 @@ section {
   padding: 20px 25px;
 }
 
-.banner-section .banner-content .yellow-btn span {
-  display: block;
-}
-
-.banner-section .banner-content .yellow-btn span:after {
-  content: '';
-  display: inline-block;
-  background: url("/wp-content/uploads/2019/06/btn-arrow.png") no-repeat center;
-  background-size: cover;
-  width: 7px;
-  height: 10px;
-  margin-left: 15px;
-}
-
 .banner-section .banner-content .yellow-btn:hover {
   color: #000;
 }
@@ -364,6 +364,39 @@ section {
   font-size: 16px;
   font-weight: 700;
   padding: 20px 54px;
+}
+
+.get-start-content .get-start-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 23px;
+}
+
+.get-start-content .get-start-box-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 244px;
+}
+
+.get-start-content .get-start-box-item__img {
+  max-height: 205px;
+  overflow: hidden;
+}
+
+.get-start-content .get-start-box-item p.text-with-arrow {
+  padding: 9px 18px;
+  background: #f1d000;
+  width: 100%;
+  font-size: 20px;
+}
+
+.get-start-content .get-start-box-item p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .footer-content {
