@@ -231,7 +231,34 @@ Template Name: Home page template
         <?php echo do_shortcode('[contact-form-7 id="158" title="Home-contact"]');  ?>
         </div>
         <div class="contact-gallery">
-        </div>
+
+        <h5>Check Out Our Past Projects</h5>
+        <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
+        <div class="contact-gallery-list">
+        <?php
+            $query = new WP_Query( [
+                'post_type'      =>'gallery',
+                'posts_per_page' => 8,
+                'orderby'        => 'comment_count',
+            ] );
+
+            if ( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                    ?>
+                    <a href="<?php  echo get_permalink(); ?>">
+                        <div class="contact-gallery-content__item">
+                            <img src="<?php echo $url; ?>" alt="">
+                        </div>
+                   </a>
+                    <?php
+                }
+            }
+                 ?>
+                 <div class="btn-area"><a href="#">View More Photos</a></div>
+         </div>
+    </div>
      </div>
   </div>
 </section>

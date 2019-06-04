@@ -1,0 +1,12 @@
+@mixin btn($color,$padding-x,$padding-y) {
+    display: inline-block;
+    background-color: $color;
+    color: $black;
+    font-size:17px;
+    font-weight: 700;
+    padding:$padding-y $padding-x;
+    transition: all .3s ease;
+    &:hover{
+        background-color: lighten($color, 10%);
+    }
+}

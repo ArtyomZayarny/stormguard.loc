@@ -251,10 +251,14 @@
 .contact-gallery{
 
     background-color:$red;
-
-    .contact-box{
+      &-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         width: 100%;
-        max-width: 50%;
+      }
+    .contact-box,
+    .contact-gallery{
+        width: 100%;
         h5{
             color:$white;
             font-size: 32px;
@@ -311,7 +315,11 @@
             grid-column: 1/3;
             }
             .your-message {
-        grid-column: 1/3;
+           grid-column: 1/3;
+           textarea {
+    resize: none;
+    max-height: 168px;
+}
             }
             .btn-area {
                 grid-column: 1/3;
@@ -327,6 +335,21 @@
                 &:hover{
                     background-color:darken(#fff,10%);
                 }
+            }
+        }
+    }
+    .contact-gallery{
+        padding-left: 36px;
+        &-list{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .btn-area{
+            grid-column: 1/5;
+            justify-self: center;
+            a{
+            @include btn($white,20px,15px);
             }
         }
     }
