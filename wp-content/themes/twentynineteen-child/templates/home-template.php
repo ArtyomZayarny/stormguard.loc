@@ -222,6 +222,20 @@ Template Name: Home page template
     </div>
 </section>
 
+<section class="contact-gallery">
+  <div class="container">
+  <div class="contact-gallery-content">
+        <div class="contact-box">
+         <h5>Contact Us Today</h5>
+         <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
+        <?php echo do_shortcode('[contact-form-7 id="158" title="Home-contact"]');  ?>
+        </div>
+        <div class="contact-gallery">
+        </div>
+     </div>
+  </div>
+</section>
+
 
 
 <?php  get_footer();  ?>
