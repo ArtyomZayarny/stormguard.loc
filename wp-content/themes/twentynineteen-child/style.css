@@ -127,7 +127,7 @@ section {
   font-weight: 400;
 }
 
-/********************* SLICK SLIDER DOTS        ******************************/
+/*********************     SLICK SLIDER DOTS        ******************************/
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -187,6 +187,16 @@ li.slick-active button:before {
   text-decoration: underline;
 }
 
+/************************ OFFERS BOX ****************/
+.offers-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 40px;
+  grid-gap: 50px 15px;
+}
+
 /*********************   FIND SECTION **************/
 .find {
   padding: 0;
@@ -194,6 +204,28 @@ li.slick-active button:before {
 
 .find-content {
   padding: 31px 0;
+}
+
+.find-content .find-submit {
+  margin-left: 10px;
+}
+
+.find-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.find-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*********************   BURGER ICON **************/
@@ -260,6 +292,55 @@ li.slick-active button:before {
   .container {
     max-width: 100%;
     padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .find-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .find-content__text {
+    margin-bottom: 20px;
+  }
+  .find-content form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 148px;
+        grid-template-columns: 1fr 148px;
+  }
+  .find-content .find-input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offers-box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .offers-box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 425px) {
+  .find-content form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .find-content .find-submit {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
   }
 }
 
@@ -413,6 +494,16 @@ li.slick-active button:before {
   margin-left: 50px;
 }
 
+.sidenav ul#menu-top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
 @media (max-width: 1200px) {
   .header-bottom__content {
     -ms-grid-columns: 1fr;
@@ -429,6 +520,9 @@ li.slick-active button:before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .header-bottom {
+    margin-bottom: -126px;
   }
 }
 
@@ -498,15 +592,6 @@ li.slick-active button:before {
           transform: translateX(5px);
 }
 
-.find-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 .find-content__icon {
   margin-left: 27px;
 }
@@ -527,7 +612,6 @@ li.slick-active button:before {
 
 .find-content .find-input {
   width: 100%;
-  max-width: 259px;
   height: 54px;
   font-size: 18px;
   padding: 10px 15px;
@@ -547,7 +631,6 @@ li.slick-active button:before {
   font-size: 18px;
   color: #ffffff;
   height: 54px;
-  margin-left: 10px;
   font-size: 18px;
   font-weight: 700;
   -webkit-transition: all .3s ease;
@@ -558,23 +641,8 @@ li.slick-active button:before {
   color: #000;
 }
 
-.find-content form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .offers-content {
   text-align: center;
-}
-
-.offers-box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 40px;
-  grid-gap: 50px 15px;
 }
 
 .offers-box h3 {
@@ -937,6 +1005,40 @@ li.slick-active button:before {
 
 .window-article__text p:last-child {
   padding-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .window-article {
+    -ms-grid-columns: 350px 1fr;
+        grid-template-columns: 350px 1fr;
+  }
+  .get-start-content .get-start-box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 23px 23px;
+  }
+}
+
+@media (max-width: 768px) {
+  .window-article {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .window-article__img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .window-article__text {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .get-start-content .get-start-box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .footer-content {

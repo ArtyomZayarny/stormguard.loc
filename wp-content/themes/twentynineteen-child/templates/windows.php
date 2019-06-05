@@ -4,7 +4,7 @@ Template Name: Windows
 */
 ?>
 <?php get_header(); ?>
-<?php /* <div class="window-wrap">
+ <div class="window-wrap">
 <section class="banner" style="background:url('/wp-content/uploads/2019/06/window_banner.png')no-repeat center;background-size:cover;height:264px"></section>
   
     <div class="container">
@@ -90,27 +90,27 @@ Template Name: Windows
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-first.png')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
-                                    <img src="/wp-content/uploads/2019/06/get-start-first.png" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <p  class="text-with-arrow">Residential</p>
                             </div>
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-second.png')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
-                                    <img src="/wp-content/uploads/2019/06/get-start-second.png" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <p  class="text-with-arrow">Commercial </p>
                             </div>
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-third.png')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
-                                    <img src="/wp-content/uploads/2019/06/get-start-third.png" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <p  class="text-with-arrow">Insurance </p>
                             </div>
@@ -183,6 +183,4 @@ Template Name: Windows
             </div>
         </section><!-- #contact-gallery -->
 </div><!-- #windows-wrap -->
-                    */ ?>
-                    <div style="height:80vh"></div>
 <?php get_footer(); ?>

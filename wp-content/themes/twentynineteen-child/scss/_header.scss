@@ -122,6 +122,12 @@
     font-size: 36px;
     margin-left: 50px;
   }
+  .sidenav {
+      ul#menu-top-bar {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+}
 
 
 @media(max-width:1200px){
@@ -135,6 +141,9 @@
         ul{
             justify-content: center;
         }
+    }
+    .header-bottom {
+        margin-bottom: -126px;
     }
 }
 @media(max-width:959px){

@@ -12,3 +12,32 @@
         }
     }
 }
+
+@media(max-width:992px){
+    .window-article {
+        grid-template-columns: 350px 1fr;
+    }
+    .get-start-content .get-start-box {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 23px 23px;
+    }
+}
+
+@media(max-width:768px){
+    .window-article {
+        grid-template-columns: 1fr;
+        &__img{
+            justify-self: center;
+        }
+        &__text{
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width:680px){
+    .get-start-content .get-start-box {
+        grid-template-columns: 1fr;
+    }
+}

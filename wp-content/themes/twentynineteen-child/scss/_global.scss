@@ -98,7 +98,7 @@ section{
         font-weight: 400;
     }
 } 
-/********************* SLICK SLIDER DOTS        ******************************/
+/*********************     SLICK SLIDER DOTS        ******************************/
 .slick-dots li {
     position: relative;
     display: inline-block;
@@ -162,18 +162,38 @@ li.slick-active button:before{
         }
     }
 }
-
+/************************ OFFERS BOX ****************/
+.offers-box {
+    display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-bottom: 40px;
+        grid-gap: 50px 15px;
+}
 
 /*********************   FIND SECTION **************/
 .find {
     padding: 0;
     &-content{
         padding: 31px 0;
+        .find-submit{
+            margin-left: 10px;
+        }
     }
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        form{
+            display: flex;
+            
+        }
+    }
+    
 }
 /*********************   BURGER ICON **************/
 .burger{
     display:none;
+
 }
 
 /*********************   CONTACT_GALLERY SECTION **************/
@@ -219,5 +239,46 @@ li.slick-active button:before{
     .container{
         max-width: 100%;
         padding: 0 15px;
+    }
+}
+
+@media(max-width:992px){
+    .find-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        &__text{
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 148px;
+        }
+    }
+    .find-content .find-input{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width:768px){
+    .offers-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+@media(max-width:575px){
+    .offers-box { 
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:425px){
+    .find-content form {
+        grid-template-columns: 1fr;
+    }
+    .find-content .find-submit {
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0;
     }
 }
