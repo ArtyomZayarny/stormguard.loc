@@ -10,3 +10,10 @@
         background-color: lighten($color, 10%);
     }
 }
+
+@mixin title($color) {
+    color:$color;
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 30px;  
+}

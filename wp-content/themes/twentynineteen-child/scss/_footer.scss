@@ -2,10 +2,11 @@
 
     &-content{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-      color:$white;
-      font-size: 12px;
-      font-weight: 400;
+        grid-template-columns: 60% 1fr;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 16px 0;
       a{  color:$white;
           text-decoration: underline;
  
@@ -28,4 +29,30 @@
    }
 
     }
+}
+
+@media(max-width:1200px){
+  .footer{
+
+    &-content{
+        grid-template-columns: 1fr;
+
+        &__copy{
+            justify-self: center;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        ul{
+            justify-content: center;
+        }
+    }
+  }
+
+}
+@media(max-width:475px){
+.footer-content {
+    ul {
+        flex-direction: column;
+    }
+  }
 }

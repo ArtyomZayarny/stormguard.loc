@@ -20,6 +20,12 @@
 </head>
 
 <body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
+  <?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
+</div>
+
 	<header class="header">
 		<div class="header-top" style="background-color:#000">
 			<div class="container">
@@ -37,10 +43,21 @@
 				</div>
 				<!-- main-nav menu -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
-			     <!-- #main-nav-menu -->
+				 <!-- #main-nav-menu -->
+				 
+				 <span class="burger" style="font-size:30px;cursor:pointer;color:#fff;" onclick="openNav()">☰</span>
 			</div>
 			
 			</div>
 		</div>
 		
 	</header>
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>

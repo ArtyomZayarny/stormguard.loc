@@ -4,14 +4,20 @@ Template Name: Windows
 */
 ?>
 <?php get_header(); ?>
-
-<section class="banner" style="background:url()no-repeat center;background-size:cover;"></section>
-
+<?php /* <div class="window-wrap">
+<section class="banner" style="background:url('/wp-content/uploads/2019/06/window_banner.png')no-repeat center;background-size:cover;height:264px"></section>
+  
     <div class="container">
-        <section class="breadcrimbs">breadcrimbs here</section>
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+            <?php if(function_exists('bcn_display'))
+            {
+                bcn_display();
+            }?>
+        </div>
+        <hr>
         <article class="window-article">
             <div class="window-article__img">
-                <img src="" alt="">
+                <img src="/wp-content/uploads/2019/06/window_worker.png" alt="">
             </div>
             <div class="window-article__text">
                     <h5 class="red-title">Windows</h5>
@@ -32,11 +38,13 @@ Template Name: Windows
             </div>
         
         </article>
+        <hr>
         <section class="offers">
           <div class="offers-content">
             <div class="heading">
-                <h4><?php echo get_field('services-title'); ?></h4>
-                <?php echo get_field('services-desc'); ?>
+                <h5 class="red-title">View Our Other Services</h4>
+                <p>From home upgrades to storm restoration, Storm Guard offers 
+                a range of services to help you with your home.</p>
             </div><!-- #heading -->
             <div class="offers-box">
                     <?php
@@ -76,34 +84,35 @@ Template Name: Windows
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h4><?php echo get_field('get-start-title'); ?></h4>
-                        <?php echo get_field('get-start-desc'); ?>
+                        <h5 class="red-title">Ready To Get Started?</h4>
+                       <p>Damage to your home or business from a storm? 
+                        Looking to replace your old roof or siding? Get Started below!</p>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
                             <div class="get-start-box-item">
                                 <div class="get-start-box-item__img">
-                                    <img src="<?php  echo get_field('get-start-first-item-img'); ?>" alt="">
+                                    <img src="/wp-content/uploads/2019/06/get-start-first.png" alt="">
                                 </div>
-                                <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-first-item-desc'); ?></p>
+                                <p  class="text-with-arrow">Residential</p>
                             </div>
                         </a>
                         <!-- #first item -->
                         <a href="#">
                             <div class="get-start-box-item">
                                 <div class="get-start-box-item__img">
-                                    <img src="<?php  echo get_field('get-start-second-item-img'); ?>" alt="">
+                                    <img src="/wp-content/uploads/2019/06/get-start-second.png" alt="">
                                 </div>
-                                <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-second-item-desc'); ?></p>
+                                <p  class="text-with-arrow">Commercial </p>
                             </div>
                         </a>
                         <!-- #first second -->
                         <a href="#">
                             <div class="get-start-box-item">
                                 <div class="get-start-box-item__img">
-                                    <img src="<?php  echo get_field('get-start-third-item-img'); ?>" alt="">
+                                    <img src="/wp-content/uploads/2019/06/get-start-third.png" alt="">
                                 </div>
-                                <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-third-item-desc'); ?></p>
+                                <p  class="text-with-arrow">Insurance </p>
                             </div>
                         </a>
                         <!-- #third item -->
@@ -118,15 +127,15 @@ Template Name: Windows
             <div class="container">
                 <div class="find-content">
                     <div class="find-content__icon">
-                    <img src="<?php echo get_field('franchise-icon'); ?>" alt=""> 
+                    <img src="/wp-content/uploads/2019/06/find-icon.png" alt=""> 
                     </div>
                     <div class="find-content__text">
-                        <h4><?php echo get_field('franchise-title'); ?></h4>
-                        <?php echo get_field('franchise-desc'); ?>
+                        <h4>Find A Franchise Near You</h4>
+                        <p>Want to speak to us in person? Enter your zip code to find the nearest franchise.</p>
                     </div>
                     <form action="#" >
-                        <p><input  class="find-input" type="text" placeholder="<?php echo get_field('franchise-input-placeholder'); ?>" required></p>
-                        <p><input  class="find-submit" style="background-color:<?php  echo get_field('franchise-btn-color'); ?>" type="submit" value="<?php echo get_field('franchise-btn-text');  ?>"></p>
+                        <p><input  class="find-input" type="text" placeholder="Zip code" required></p>
+                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="Submit"></p>
                     </form>
                    </div>
                 </div>
@@ -142,7 +151,7 @@ Template Name: Windows
                         <a href="#">Contact the Storm Guard Corporate Office</a>
                     </div>
                 </div>
-                <div class="contact-gallery">
+                <div class="contact-gallery-wrap">
 
                     <h5>Check Out Our Past Projects</h5>
                     <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
@@ -173,6 +182,7 @@ Template Name: Windows
               </div><!-- #gallery-content -->
             </div>
         </section><!-- #contact-gallery -->
-
-
+</div><!-- #windows-wrap -->
+                    */ ?>
+                    <div style="height:80vh"></div>
 <?php get_footer(); ?>

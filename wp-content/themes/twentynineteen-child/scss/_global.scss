@@ -59,7 +59,14 @@ section{
         margin-left: 15px;
     }
 }
-
+/********************* RED TITLE ********************/
+.red-title{
+    color:$red;
+    font-size: 34px;
+     font-weight: 400;
+     line-height: 40px;
+     padding-bottom: 30px;
+}
 /****************   YELLOW BUTTON *******************/
 .yellow-btn {
     display: inline-block;
@@ -134,4 +141,83 @@ ul.slick-dots {
 }
 li.slick-active button:before{
     color: black;
+}
+
+/************* BREADCRUMBS LINKS ******************/
+
+.breadcrumbs{
+    padding :23px 0;
+    span{
+        
+        a{  color:$red;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 23px;
+            text-decoration: underline;
+        }
+        &:last-child{
+            a{
+            $color:$black;
+            }
+        }
+    }
+}
+
+
+/*********************   FIND SECTION **************/
+.find {
+    padding: 0;
+    &-content{
+        padding: 31px 0;
+    }
+}
+/*********************   BURGER ICON **************/
+.burger{
+    display:none;
+}
+
+/*********************   CONTACT_GALLERY SECTION **************/
+.contact-gallery-content{
+    &__item{
+        display: flex;
+        border: 1px solid #fff;
+    }
+    .contact-box {
+        padding-right: 50px;
+        border-right: 1px solid $lightRed;
+    }
+    .contact-gallery-wrap {
+        padding-left: 44px;
+        border-left: 1px solid $darkRed;
+    }
+    h5{
+        @include title($white);
+    }
+    p{
+        color:$white;
+        padding-bottom: 25px;
+    }
+
+    
+    .btn-area{
+        a{
+            @include btn($white,25px,19px);
+            width:100%;
+            max-width: 386px;
+            text-align: center;
+            color:$red;
+            margin-bottom: 20px;
+            transition:all .3s ease;
+            &:hover{
+                color:$black;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px){
+    .container{
+        max-width: 100%;
+        padding: 0 15px;
+    }
 }

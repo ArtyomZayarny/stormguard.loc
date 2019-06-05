@@ -1,0 +1,14 @@
+.window-article {
+    display: grid;
+    grid-template-columns: 535px 1fr;
+    padding: 28px 0;
+    &__text{
+        padding-left: 20px;
+        p{
+            padding-bottom: 30px;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+}
