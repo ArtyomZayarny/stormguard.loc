@@ -164,7 +164,7 @@ li.slick-active button:before{
 }
 /************************ OFFERS BOX ****************/
 .offers-box {
-    display: grid;
+         display: grid;
         grid-template-columns: repeat(3,1fr);
         padding-bottom: 40px;
         grid-gap: 50px 15px;
@@ -197,43 +197,55 @@ li.slick-active button:before{
 }
 
 /*********************   CONTACT_GALLERY SECTION **************/
-.contact-gallery-content{
-    &__item{
-        display: flex;
-        border: 1px solid #fff;
-    }
-    .contact-box {
-        padding-right: 50px;
-        border-right: 1px solid $lightRed;
-    }
-    .contact-gallery-wrap {
-        padding-left: 44px;
-        border-left: 1px solid $darkRed;
-    }
-    h5{
-        @include title($white);
-    }
-    p{
-        color:$white;
-        padding-bottom: 25px;
-    }
+.contact-gallery{
+    &-content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
 
-    
-    .btn-area{
-        a{
-            @include btn($white,25px,19px);
-            width:100%;
-            max-width: 386px;
-            text-align: center;
-            color:$red;
-            margin-bottom: 20px;
-            transition:all .3s ease;
-            &:hover{
-                color:$black;
+        &__item{
+            display: flex;
+            border: 1px solid #fff;
+        }
+        .contact-box {
+            padding-right: 50px;
+            border-right: 1px solid $lightRed;
+        }
+        
+        h5{
+            @include title($white);
+        }
+        p{
+            color:$white;
+            padding-bottom: 25px;
+        }
+
+        .btn-area{
+            a{
+                @include btn($white,25px,19px);
+                width:100%;
+                max-width: 386px;
+                text-align: center;
+                color:$red;
+                margin-bottom: 20px;
+                transition:all .3s ease;
+                &:hover{
+                    color:$black;
+                }
             }
         }
     }
+    &-wrap {
+        padding-left: 44px;
+        border-left: 1px solid $darkRed;
+    }
+    &-list{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4,1fr);
+    }
 }
+
 
 @media(max-width:1200px){
     .container{
@@ -264,6 +276,25 @@ li.slick-active button:before{
     .offers-box {
         grid-template-columns: repeat(2, 1fr);
     }
+    .contact-gallery-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        &__item{
+            display: inline-flex;
+        }
+        .contact-box,
+        &-wrap{
+            padding: 0;
+            border:unset;
+        }      
+    }
+    .contact-gallery{
+
+        &-wrap{
+            padding:0;
+            border:unset;
+        }
+    }
 } 
 
 @media(max-width:575px){
@@ -279,6 +310,14 @@ li.slick-active button:before{
     .find-content .find-submit {
         width: 100%;
         margin-top: 15px;
-        margin-left: 0;
+        margin-left: 0; 
+    }
+}
+
+@media(max-width:375px){
+    .contact-gallery .contact-gallery-list {
+        display: grid; 
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

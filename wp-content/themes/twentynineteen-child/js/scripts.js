@@ -1,9 +1,13 @@
 jQuery('document').ready(function(){
     //Init slick slider
-    jQuery('#slider-box').slick({
+    var sliderBox = document.getElementById('slider-box');
+    if (sliderBox) {
+      jQuery('#slider-box').slick({
         arrows:false,
         dots:true
       });
+    }
+    
       //Mobile menu dropdown
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
