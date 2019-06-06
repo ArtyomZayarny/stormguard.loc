@@ -12,23 +12,16 @@
 get_header();
 ?>
 
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<div class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentynineteen' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentynineteen' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</div><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+<section class=banner style="background:url('/wp-content/uploads/2019/06/how-we-are-banner@2x.png')no-repeat center;background-size:cover;height:264px;"></section>
+<div class="container">
+    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+                <?php if(function_exists('bcn_display'))
+                {
+                    bcn_display();
+                }?>
+	</div><!-- #breadcrumbs -->
+	<h3>Sorry Page not found</h3>
+    <hr>
+	</div>
 <?php
 get_footer();

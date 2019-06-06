@@ -61,13 +61,15 @@ Template Name: Windows
                             $query->the_post();
                             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
                             ?>
-                            <div class="offers-box-item"> 
-                                <div class='offers-box-item__circle' style="background-color:#db302c;">
-                                    <img src="<?php echo $url ?>" /> 
-                                </div>
-                                <h3><?php echo get_the_title();?></h3>
-                                <?php the_excerpt(); ?>
-                            </div><!-- #offers-item -->
+                            <a href="<?php echo get_permalink(); ?>">
+                                <div class="offers-box-item"> 
+                                    <div class='offers-box-item__circle' style="background-color:#db302c;">
+                                        <img src="<?php echo $url ?>" /> 
+                                    </div>
+                                    <h3><?php echo get_the_title();?></h3>
+                                    <?php the_excerpt(); ?>
+                                </div><!-- #offers-item -->
+                            </a>
                             <?php 
                         }
                     } else {

@@ -51,6 +51,14 @@ section{
 hr{
     background-color: #d4d4d4;
 }
+footer.footer {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+}
+
 .text-with-arrow{
     display: block;
     &:after{
@@ -172,6 +180,19 @@ li.slick-active button:before{
         grid-template-columns: repeat(3,1fr);
         padding-bottom: 40px;
         grid-gap: 50px 15px;
+}
+/************************ SINGLE OFFERS BOX ****************/
+.servicess-wrap{
+    .offers-box {
+        display: -ms-grid;
+        display: grid;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        padding: 40px;
+        grid-gap: 50px 15px;
+    }
 }
 
 /*********************   FIND SECTION **************/
