@@ -4,7 +4,7 @@
         align-items: center;
     .banner-content{
         position: relative;
-        z-index: 1;
+        z-index: 0;
         width: 100%;
         max-width: 588px;
         background-color: rgba(0,0,0,0.6);
@@ -251,73 +251,67 @@
        border-top:5px solid $white;
       background-color:$red;
      
-    .contact-box{
-            input{
-            font-size: 16px;
-            font-weight:400;
-            width:100%;
-            }
-            input[type="value"]{
-                font-family: 'Lato', sans-serif;
-                font-size: 16px;
-                font-weight:400;
-                color:#ababab;
-            }
+  }
 
-        .subject {
-                grid-column: 1/3;
-                display: grid;
-                position: relative;
-                &:after{
-                    content:'';
-                    width:15px;
-                    height:7px;
-                    background:url('/wp-content/uploads/2019/06/select_arrow.png')no-repeat center;
-                    background-size:cover;
-                    display:inline-block;
-                    position:absolute;
-                    top: 20px;
-                    right: 20px;
-                }
-        }
-        select[name="subject"]{
-                padding: 10px 10px;
-                font-size: 16px;
-                font-weight: 400;
-                font-family: 'Lato', sans-serif;
-            
-        }
-        .your-message {
-            grid-column: 1/3;
-            }
-        textarea {
-            resize: none;
-            max-height: 168px;
-        }
-            
-        // .btn-area {
-        //     grid-column: 1/3;
-        //     justify-self: end;
-        //     display: grid;
-        // } 
-        input[type="submit"] {
-            color: $red;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: unset;
-            background-color: #fff;
-            &:hover{
-                background-color:darken(#fff,10%);
-            }
-        }
-    
-    .btn-area{
-        grid-column: 1/5;
-        justify-self: center;
-        a{
-        @include btn($white,18px,15px);
-        }
+
+  @media(max-width:992px){
+    .latest-news .latest-news-content {
+        grid-template-columns: 1fr;
+        grid-gap:20px 0;
     }
- }
-}
+    .news-item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 250px 1fr;
+    }
+    .news-item__img {
+        display: grid;
+        grid-row: 1/3;
+    }
+    .news-item__title {
+        display: grid;
+        grid-column: 2/3;
+    }
+    .latest-news .latest-news-content .news-item__text {
+        padding: 0 15px;
+        margin-bottom: 20px;
+        grid-column: 2/3;
+    }
+    .author {
+        grid-column: 1/3;
+    }
+
+  }
+
+  @media(max-width:525px){
+    .news-item {
+        width: 100%;
+        max-width: 78%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .news-item__img {
+        display: -ms-grid;
+        display: grid;
+        justify-self: center;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+  }
+  @media(max-width:425px){
+    .news-item {
+        max-width: 95%;
+    }
+    .banner-section .banner-content {
+        text-align: center;
+    }
+    .banner-section .banner-content__text h3 {
+        font-size: 20px;
+    }
+
+
+  }
    

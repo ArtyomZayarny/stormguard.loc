@@ -79,46 +79,45 @@ Template Name: Home page template
     </div>
 </section>
 <section class="get-start">
-    <div class="container">
-        <div class="get-start-content">
-            <div class="heading">
-                <h4><?php echo get_field('get-start-title'); ?></h4>
-                <?php echo get_field('get-start-desc'); ?>
+            <div class="container">
+                <div class="get-start-content">
+                    <div class="heading">
+                        <h5 class="red-title">Ready To Get Started?</h4>
+                       <p>Damage to your home or business from a storm? 
+                        Looking to replace your old roof or siding? Get Started below!</p>
+                    </div>
+                    <div class="get-start-box">
+                        <a href="#">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-first.png')no-repeat center;background-size:cover;">
+                                <div class="get-start-box-item__img">
+                                    <img src="" alt="">
+                                </div>
+                                <p  class="text-with-arrow">Residential</p>
+                            </div>
+                        </a>
+                        <!-- #first item -->
+                        <a href="#">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-second.png')no-repeat center;background-size:cover;">
+                                <div class="get-start-box-item__img">
+                                    <img src="" alt="">
+                                </div>
+                                <p  class="text-with-arrow">Commercial </p>
+                            </div>
+                        </a>
+                        <!-- #first second -->
+                        <a href="#">
+                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-third.png')no-repeat center;background-size:cover;">
+                                <div class="get-start-box-item__img">
+                                    <img src="" alt="">
+                                </div>
+                                <p  class="text-with-arrow">Insurance </p>
+                            </div>
+                        </a>
+                        <!-- #third item -->
+                    </div>
+                </div>
             </div>
-            <div class="get-start-box">
-                <a href="#">
-                    <div class="get-start-box-item">
-                        <div class="get-start-box-item__img">
-                            <img src="<?php  echo get_field('get-start-first-item-img'); ?>" alt="">
-                        </div>
-                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-first-item-desc'); ?></p>
-                    </div>
-                 </a>
-                 <!-- #first item -->
-                 <a href="#">
-                    <div class="get-start-box-item">
-                        <div class="get-start-box-item__img">
-                            <img src="<?php  echo get_field('get-start-second-item-img'); ?>" alt="">
-                        </div>
-                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-second-item-desc'); ?></p>
-                    </div>
-                 </a>
-                 <!-- #first second -->
-                 <a href="#">
-                    <div class="get-start-box-item">
-                        <div class="get-start-box-item__img">
-                            <img src="<?php  echo get_field('get-start-third-item-img'); ?>" alt="">
-                        </div>
-                        <p href="#" class="text-with-arrow"><?php  echo get_field('get-start-third-item-desc'); ?></p>
-                    </div>
-                 </a>
-                 <!-- #third item -->
-                 
-            
-            </div>
-        </div>
-    </div>
-</section>
+        </section><!-- #get-start -->
 <section class="slider-rewies" style="background-color:#f7f8f8;">
    <div class="container">
    <div class="heading">
@@ -181,7 +180,7 @@ Template Name: Home page template
              </div>
        </div>
    </div>
-</section>
+</section><!-- #slider section -->
 <section class="latest-news">
     <div class="container">
     <div class="heading">
@@ -224,43 +223,40 @@ Template Name: Home page template
 
 <section class="contact-gallery">
   <div class="container">
-  <div class="contact-gallery-content">
-        <div class="contact-box">
-         <h5>Contact Us Today</h5>
-         <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
-        <?php echo do_shortcode('[contact-form-7 id="158" title="Home-contact"]');  ?>
-        </div>
-        <div class="contact-gallery">
+    <div class="contact-gallery-content">
+            <div class="contact-box">
+                <h5>Contact Us Today</h5>
+                <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
+                <?php echo do_shortcode('[contact-form-7 id="158" title="Home-contact"]');  ?>
+            </div><!-- contact-box -->
+            <div class="contact-gallery-wrap">
+                <h5>Check Out Our Past Projects</h5>
+                <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
+                <div class="contact-gallery-list">
+                <?php
+                    $query = new WP_Query( [
+                        'post_type'      =>'gallery',
+                        'posts_per_page' => 8,
+                        'orderby'        => 'comment_count',
+                    ] );
 
-        <h5>Check Out Our Past Projects</h5>
-        <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
-        <div class="contact-gallery-list">
-        <?php
-            $query = new WP_Query( [
-                'post_type'      =>'gallery',
-                'posts_per_page' => 8,
-                'orderby'        => 'comment_count',
-            ] );
-
-            if ( $query->have_posts() ) {
-                while ( $query->have_posts() ) {
-                    $query->the_post();
-                    $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
-                    ?>
-                    <a href="<?php  echo get_permalink(); ?>">
-                        <div class="contact-gallery-content__item">
-                            <img src="<?php echo $url; ?>" alt="">
-                        </div>
-                   </a>
-                    <?php
-                }
-            }
-                 ?>
-                 <div class="btn-area"><a href="#">View More Photos</a></div>
-         </div>
-    </div>
-     </div>
-  </div>
+                    if ( $query->have_posts() ) {
+                        while ( $query->have_posts() ) {
+                            $query->the_post();
+                            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                            ?>
+                            <a href="<?php  echo get_permalink(); ?>">
+                                <div class="contact-gallery-content__item">
+                                    <img src="<?php echo $url; ?>" alt="">
+                                </div>
+                            </a>
+                            <?php }
+                                } ?>
+                        
+                </div><!--  #gallery list -->
+            </div><!-- #gallery-content-wrap -->
+        </div><!--contact-gallery-content -->
+  </div><!-- #content -->
 </section>
 
 

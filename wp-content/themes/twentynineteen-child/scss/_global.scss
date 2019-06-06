@@ -286,6 +286,81 @@ a.fill-form{
     }
 }
 
+/********************** CONTACT FORM *******************/
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:24px;
+        input{
+            font-size: 16px;
+            font-weight:400;
+            width:100%;
+        }
+        input[type="value"]{
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            font-weight:400;
+            color:#ababab;
+        }
+
+        .subject {
+                grid-column: 1/3;
+                display: grid;
+                position: relative;
+                &:after{
+                    content:'';
+                    width:15px;
+                    height:7px;
+                    background:url('/wp-content/uploads/2019/06/select_arrow.png')no-repeat center;
+                    background-size:cover;
+                    display:inline-block;
+                    position:absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+        }
+        select[name="subject"]{
+                padding: 10px 10px;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+            
+        }
+        .your-message {
+            grid-column: 1/3;
+            }
+        textarea {
+            resize: none;
+            max-height: 168px;
+            &::placeholder{
+                 font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            font-weight:400;
+            color:#ababab;
+            }
+        }
+            
+        input[type="submit"] {
+            color: $red;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: unset;
+            background-color: #fff;
+            &:hover{
+                color:$black;
+            }
+        }
+
+        .btn-area{
+                display: grid;
+                grid-column: 1/3;
+                justify-self: end;
+            a{
+                @include btn($white,18px,15px);
+            }
+        }
+}
+
 
 @media(max-width:1200px){
     .container{
