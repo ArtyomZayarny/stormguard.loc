@@ -426,6 +426,10 @@ a.fill-form:hover {
 .contact textarea {
   resize: none;
   max-height: 168px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
 }
 
 .contact textarea::-webkit-input-placeholder {
@@ -735,6 +739,14 @@ a.fill-form:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.header-top__content ul.menu li.current-menu-item a {
+  color: #db302c;
+}
+
+.header-bottom__content ul li.current-page-ancestor a {
+  color: #db302c;
 }
 
 @media (max-width: 1200px) {
@@ -1070,6 +1082,36 @@ a.fill-form:hover {
 .contact-gallery {
   border-top: 5px solid #fff;
   background-color: #db302c;
+}
+
+.contact-gallery-wrap .btn-area {
+  text-align: center;
+}
+
+.contact-gallery-wrap a.morePhotos {
+  display: inline-block;
+  width: unset;
+  max-width: unset;
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 19px 36px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-decoration: none;
+  transition: all .3s ease;
+  color: #db302c;
+}
+
+.contact-gallery-wrap a.morePhotos:hover {
+  background-color: white;
+}
+
+.contact-gallery-wrap a.morePhotos:hover {
+  color: #000;
 }
 
 @media (max-width: 992px) {

@@ -129,7 +129,12 @@
       }
 }
 
-
+.header-top__content ul.menu li.current-menu-item a{
+    color:$red;
+}
+.header-bottom__content ul li.current-page-ancestor a{
+    color:$red;
+}
 @media(max-width:1200px){
     .header-bottom__content {
         grid-template-columns: 1fr;

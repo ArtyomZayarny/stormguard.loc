@@ -252,7 +252,24 @@
       background-color:$red;
      
   }
-
+.contact-gallery-wrap{
+    .btn-area{
+        text-align: center;
+    }
+    a.morePhotos{
+        display:inline-block;
+        width:unset;
+        max-width: unset; 
+        margin-top:20px;
+        @include btn($white,36px,19px);
+        text-decoration:none;
+        transition:all .3s ease;
+        color:$red;
+        &:hover{
+            color:$black;
+        }
+    }
+}
 
   @media(max-width:992px){
     .latest-news .latest-news-content {

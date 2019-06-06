@@ -154,7 +154,7 @@ Template Name: Windows
                 <div class="contact-gallery-wrap">
 
                     <h5>Check Out Our Past Projects</h5>
-                    <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
+                    <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past. <a href="#">View the whole portfolio</a>.</p>
                     <div class="contact-gallery-list">
                     <?php
                         $query = new WP_Query( [
