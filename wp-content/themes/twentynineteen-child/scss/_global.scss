@@ -47,6 +47,10 @@ select {
 section{
     padding:40px 0;
 }
+
+hr{
+    background-color: #d4d4d4;
+}
 .text-with-arrow{
     display: block;
     &:after{
@@ -190,6 +194,30 @@ li.slick-active button:before{
     }
     
 }
+
+/********************* FIND WITH BUTON *************/
+.find-content.with-btn {
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:867px){
+    .find-content.with-btn{
+        flex-wrap: wrap;
+        justify-content: center;
+        .find-content__text{
+            width: 100%;
+        }
+    }
+}
+a.fill-form{
+    @include btn($red,55px,23px);
+    color:$white;
+    &:hover{
+        background-color: darken($red,10%);
+    }
+}
+
+
 /*********************   BURGER ICON **************/
 .burger{
     display:none;
@@ -238,11 +266,23 @@ li.slick-active button:before{
     &-wrap {
         padding-left: 44px;
         border-left: 1px solid $darkRed;
+        a{
+            color:$white;
+            text-decoration: underline;
+        }
     }
     &-list{
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(4,1fr);
+    }
+}
+/******************* CONTACT US WITH TWO BTN *****************/
+.contact-gallery .contact-box .btn-area.two a {
+    transition:all .3s ease;
+    color: $red;
+    &:hover{
+        color:$black;
     }
 }
 

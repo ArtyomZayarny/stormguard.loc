@@ -69,6 +69,10 @@ section {
   padding: 40px 0;
 }
 
+hr {
+  background-color: #d4d4d4;
+}
+
 .text-with-arrow {
   display: block;
 }
@@ -228,6 +232,49 @@ li.slick-active button:before {
   display: flex;
 }
 
+/********************* FIND WITH BUTON *************/
+.find-content.with-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 867px) {
+  .find-content.with-btn {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .find-content.with-btn .find-content__text {
+    width: 100%;
+  }
+}
+
+a.fill-form {
+  display: inline-block;
+  background-color: #db302c;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 23px 55px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: #fff;
+}
+
+a.fill-form:hover {
+  background-color: #e25b58;
+}
+
+a.fill-form:hover {
+  background-color: #b5221f;
+}
+
 /*********************   BURGER ICON **************/
 .burger {
   display: none;
@@ -296,12 +343,28 @@ li.slick-active button:before {
   border-left: 1px solid #bb2723;
 }
 
+.contact-gallery-wrap a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .contact-gallery-list {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+}
+
+/******************* CONTACT US WITH TWO BTN *****************/
+.contact-gallery .contact-box .btn-area.two a {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: #db302c;
+}
+
+.contact-gallery .contact-box .btn-area.two a:hover {
+  color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -543,9 +606,9 @@ li.slick-active button:before {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 1200px) {
@@ -1021,6 +1084,55 @@ li.slick-active button:before {
   .get-start-content .get-start-box {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+}
+
+.franchise .red-title {
+  padding-bottom: 17px;
+}
+
+.franchise .text-img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 500px;
+      grid-template-columns: 1fr 500px;
+}
+
+.franchise .text-img__text {
+  padding-right: 20px;
+}
+
+.franchise .text-img p {
+  padding-bottom: 30px;
+}
+
+.franchise section.articles {
+  padding-top: 0;
+}
+
+.franchise section.articles p {
+  padding-bottom: 30px;
+}
+
+.franchise section.articles a {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .franchise .text-img {
+    -ms-grid-columns: 1fr 250px;
+        grid-template-columns: 1fr 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .franchise .text-img {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .text-img__img {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
 

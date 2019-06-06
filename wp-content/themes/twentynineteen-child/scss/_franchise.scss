@@ -1,0 +1,42 @@
+.franchise{
+    .red-title{
+        padding-bottom: 17px;
+    }
+    .text-img{
+        display:grid;
+        grid-template-columns: 1fr 500px;
+        &__text{
+            padding-right: 20px;
+        }
+        p{
+            padding-bottom: 30px;
+        }
+    }
+    section.articles{
+        padding-top: 0;
+        p{
+            padding-bottom: 30px;
+        }
+        a{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+@media(max-width:992px){
+    .franchise .text-img {
+        grid-template-columns: 1fr 250px;
+    }
+}
+
+@media(max-width:768px){
+    .franchise .text-img {
+        grid-template-columns: 1fr;
+    }
+    .text-img__img {
+        justify-self: center;
+    }
+}
