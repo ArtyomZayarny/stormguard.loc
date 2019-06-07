@@ -15,7 +15,7 @@
 
 	</div><!-- #content -->
 
-	<footer class="footer" style="background-color:#000000;">
+	<footer class="footer" style="background-color:<?php echo the_field('footer-bg-color', 'option')?>">
 	     <div class="container">
 			<div class="footer-content">
 				<div class="footer-content__copy">

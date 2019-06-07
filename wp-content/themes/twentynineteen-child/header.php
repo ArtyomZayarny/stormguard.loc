@@ -10,6 +10,7 @@
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
+
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -27,7 +28,7 @@
 </div>
 
 	<header class="header">
-		<div class="header-top" style="background-color:#000">
+		<div class="header-top" style="background-color:<?php the_field('backgroud-color', 'option')?>">
 			<div class="container">
 					<div class="header-top header-top__content">
 						<a href="#" class="header-top__content__button">Find Your Local Storm Guard! </a>
@@ -39,7 +40,8 @@
 			<div class="container">
 			<div class="header-bottom__content">
 			    <div class="header-bottom__content header-bottom__content__img">
-				   <a href="/"><img src="/wp-content/uploads/2019/06/logo.png" alt="logo"></a>
+				   <a href="/"><img src="<?php the_field('logo', 'option'); ?>" alt="logo"></a>
+				    
 				</div>
 				<!-- main-nav menu -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>

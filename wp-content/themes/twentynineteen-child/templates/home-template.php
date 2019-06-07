@@ -11,9 +11,10 @@ Template Name: Home page template
        <div class="banner-content">
            <div class="banner-content__text">
                 <?php echo get_field('banner-text'); ?>
+               
            </div>
             <a href="#" class="yellow-btn">
-                <span class="text-with-arrow">Contact Us Today</span>
+                <span class="text-with-arrow"><?php echo get_field('banner-btn-text'); ?></span>
             </a>
        </div>
     </div>
@@ -84,35 +85,36 @@ Template Name: Home page template
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h5 class="red-title">Ready To Get Started?</h4>
-                       <p>Damage to your home or business from a storm? 
-                        Looking to replace your old roof or siding? Get Started below!</p>
+                        <h5 class="red-title"><?php echo get_field('get-start-title');?></h4>
+                       <?php  echo get_field('get-start-desc'); ?>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-first.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo the_field('first-item-img'); ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Residential</p>
+                                <p  class="text-with-arrow">
+                                
+                                <?php echo the_field('first-item-title'); ?></p>
                             </div>
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-second.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo the_field('second-item-img'); ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Commercial </p>
+                                <p  class="text-with-arrow"><?php echo the_field('second-item-title'); ?></p>
                             </div>
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-third.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo the_field('third-item-img'); ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Insurance </p>
+                                <p  class="text-with-arrow"><?php echo the_field('third-item-title'); ?></p>
                             </div>
                         </a>
                         <!-- #third item -->
@@ -123,59 +125,51 @@ Template Name: Home page template
 <section class="slider-rewies" style="background-color:#f7f8f8;">
    <div class="container">
    <div class="heading">
-                <h4>See What Clients Have To Say</h4>
+                <h4><?php echo get_field('what-client-say-title');?></h4>
             </div>
        <div class="slider-rewies-content">
              <div id="slider-box">
                  <div class="slider-box__item">
                     <div class="slider-box__item__text">
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus gravida neque. Morbi tincidunt quam vel ligula dapibus, quis accumsan dolor consequat. Quisque quis nibh posuere, lobortis odio ut, auctor erat. Morbi et felis id mi rutrum egestas. Etiam tempus justo tellus, quis congue mi convallis dapibus. Maecenas vitae pharetra eros. Praesent placerat dapibus laoreet. Nunc eu semper magna, et aliquet elit. Pellentesque nisl sapien, gravida vitae ipsum eu, scelerisque elementum massa. Cras venenatis vitae odio in pretium. Quisque lacinia eros blandit velit congue, id tincidunt quam ullamcorper.
-                        </p>
+                        <?php echo get_field('first-rewie-content');?>
                     </div>
                     <div class="slider-box__item__author-area">
                         <div class="slider-box__item__author-area__name">
-                            <p>John Smith</p>
-                            <p> Homeowner</p>
+                        <p><?php echo get_field('first-rewie-author'); ?></p>
+                           <p><?php echo get_field('first-rewie-author-comp'); ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="slider-box__item">
                     <div class="slider-box__item__text">
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus gravida neque. Morbi tincidunt quam vel ligula dapibus, quis accumsan dolor consequat. Quisque quis nibh posuere, lobortis odio ut, auctor erat. Morbi et felis id mi rutrum egestas. Etiam tempus justo tellus, quis congue mi convallis dapibus. Maecenas vitae pharetra eros. Praesent placerat dapibus laoreet. Nunc eu semper magna, et aliquet elit. Pellentesque nisl sapien, gravida vitae ipsum eu, scelerisque elementum massa. Cras venenatis vitae odio in pretium. Quisque lacinia eros blandit velit congue, id tincidunt quam ullamcorper.
-                        </p>
+                        <?php echo get_field('first-rewie-content');?>
                     </div>
                     <div class="slider-box__item__author-area">
                         <div class="slider-box__item__author-area__name">
-                            <p>John Smith</p>
-                            <p> Homeowner</p>
+                        <p><?php echo get_field('first-rewie-author'); ?></p>
+                           <p><?php echo get_field('first-rewie-author-comp'); ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="slider-box__item">
                     <div class="slider-box__item__text">
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus gravida neque. Morbi tincidunt quam vel ligula dapibus, quis accumsan dolor consequat. Quisque quis nibh posuere, lobortis odio ut, auctor erat. Morbi et felis id mi rutrum egestas. Etiam tempus justo tellus, quis congue mi convallis dapibus. Maecenas vitae pharetra eros. Praesent placerat dapibus laoreet. Nunc eu semper magna, et aliquet elit. Pellentesque nisl sapien, gravida vitae ipsum eu, scelerisque elementum massa. Cras venenatis vitae odio in pretium. Quisque lacinia eros blandit velit congue, id tincidunt quam ullamcorper.
-                        </p>
+                        <?php echo get_field('first-rewie-content');?>
                     </div>
                     <div class="slider-box__item__author-area">
                         <div class="slider-box__item__author-area__name">
-                            <p>John Smith</p>
-                            <p> Homeowner</p>
+                        <p><?php echo get_field('first-rewie-author'); ?></p>
+                           <p><?php echo get_field('first-rewie-author-comp'); ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="slider-box__item">
                     <div class="slider-box__item__text">
-                        <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus gravida neque. Morbi tincidunt quam vel ligula dapibus, quis accumsan dolor consequat. Quisque quis nibh posuere, lobortis odio ut, auctor erat. Morbi et felis id mi rutrum egestas. Etiam tempus justo tellus, quis congue mi convallis dapibus. Maecenas vitae pharetra eros. Praesent placerat dapibus laoreet. Nunc eu semper magna, et aliquet elit. Pellentesque nisl sapien, gravida vitae ipsum eu, scelerisque elementum massa. Cras venenatis vitae odio in pretium. Quisque lacinia eros blandit velit congue, id tincidunt quam ullamcorper.
-                        </p>
+                        <?php echo get_field('first-rewie-content');?>
                     </div>
                     <div class="slider-box__item__author-area">
                         <div class="slider-box__item__author-area__name">
-                            <p>John Smith</p>
-                            <p> Homeowner</p>
+                           <p><?php echo get_field('first-rewie-author'); ?></p>
+                           <p><?php echo get_field('first-rewie-author-comp'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -186,9 +180,9 @@ Template Name: Home page template
 <section class="latest-news">
     <div class="container">
     <div class="heading">
-                <h4>SLatest News</h4>
+                <h4>Latest News</h4>
             </div>
-        <div class="latest-news-content">
+        <div class="latest-news-content"> 
       <?php
             $query = new WP_Query( [
                 'post_type'      =>'post',
@@ -216,7 +210,7 @@ Template Name: Home page template
                         <?php
                 }
             }
-
+            wp_reset_postdata();
             ?>
         </div><!-- #latest-news-content-->
         <div class="btn-area"><a href="#" class="yellow-btn">View More News</a></div>
@@ -227,13 +221,13 @@ Template Name: Home page template
   <div class="container">
     <div class="contact-gallery-content">
             <div class="contact-box">
-                <h5>Contact Us Today</h5>
-                <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
+                <h5> <?php echo get_field('contact-title'); ?></h5>
+               <?php echo get_field('contact-desc');?>
                 <?php echo do_shortcode('[contact-form-7 id="158" title="Home-contact"]');  ?>
             </div><!-- contact-box -->
             <div class="contact-gallery-wrap">
-                    <h5>Check Out Our Past Projects</h5>
-                    <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
+                    <h5><?php echo get_field('gallery-title'); ?></h5>
+                    <?php echo get_field('gallery-desc');?>
                     <div class="contact-gallery-list">
                     <?php
                     $query = new WP_Query( [
@@ -253,10 +247,12 @@ Template Name: Home page template
                                 </div>
                             </a>
                             <?php }
-                                } ?>
+                                } 
+                                wp_reset_postdata();
+                                ?>
                         
                 </div><!--  #gallery list -->
-                <div class="btn-area"><a href="#" class="morePhotos">View More Photos</a></div>
+                <div class="btn-area"><a href="#" class="morePhotos"><?php echo get_field('gallery-btn-text');?></a></div>
             </div><!-- #gallery-content-wrap -->
         </div><!--contact-gallery-content -->
   </div><!-- #content -->

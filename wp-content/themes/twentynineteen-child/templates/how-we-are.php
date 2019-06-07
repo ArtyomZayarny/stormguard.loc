@@ -16,18 +16,11 @@ Template Name: Who we Are
 <hr>
 <article class="window-article">
             <div class="window-article__img">
-                <img src="/wp-content/uploads/2019/06/who-we-are-article.png" alt="">
+                <img src="<?php echo get_field('article-img');?>" alt="">
             </div>
             <div class="window-article__text">
-                    <h5 class="red-title">Who We Are</h5>
-                    <p>Storm Guard Restoration is a trusted name in the insurance restoration industry.
-                         For over a decade, Storm Guard has specialized in exterior insurance restoration
-                          for roofing, siding, windows, gutters, and emergency tarping services.</p>
-
-                    <p>The Storm Guard “Way” is the spirit running through the core of our entire organization.
-                         Our team of professionals strives to provide our clients with the utmost in quality 
-                         construction and insurance expertise. As a trusted advocate, we will always strive to help
-                          ease our clients’ burden with the utmost in quality insurance and construction expertise.</p>
+                    <h5 class="red-title"><?php echo get_field('article-title');?></h5>
+                    <?php echo get_field('article-desc');?>
             </div>
         
         </article>
@@ -36,35 +29,34 @@ Template Name: Who we Are
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h5 class="red-title">Ready To Get Started?</h4>
-                       <p>Damage to your home or business from a storm? 
-                        Looking to replace your old roof or siding? Get Started below!</p>
+                        <h5 class="red-title"><?php echo get_field('ready-title'); ?></h4>
+                        <?php echo get_field('ready-desc'); ?>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-first.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img');?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Residential</p>
+                                <p  class="text-with-arrow"><?php echo get_field('first-item-title');?></p>
                             </div>
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-second.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img');?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Commercial </p>
+                                <p  class="text-with-arrow"><?php echo get_field('second-item-title');?></p>
                             </div>
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-third.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img');?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Insurance </p>
+                                <p  class="text-with-arrow"><?php echo get_field('third-item-title');?></p>
                             </div>
                         </a>
                         <!-- #third item -->
@@ -78,15 +70,15 @@ Template Name: Who we Are
             <div class="container">
                 <div class="find-content">
                     <div class="find-content__icon">
-                    <img src="/wp-content/uploads/2019/06/find-icon.png" alt=""> 
+                    <img src="<?php echo get_field('franchise-icon'); ?>" alt=""> 
                     </div>
                     <div class="find-content__text">
-                        <h4>Find A Franchise Near You</h4>
-                        <p>Want to speak to us in person? Enter your zip code to find the nearest franchise.</p>
+                        <h4><?php echo get_field('franchise-title'); ?></h4>
+                        <?php echo get_field('franchise-desc'); ?>
                     </div>
                     <form action="#" >
-                        <p><input  class="find-input" type="text" placeholder="Zip code" required></p>
-                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="Submit"></p>
+                        <p><input  class="find-input" type="text" placeholder="<?php echo get_field('franchise-form-placeholder'); ?>" required></p>
+                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="<?php echo get_field('franchise-btn-text'); ?>"></p>
                     </form>
                    </div>
                 </div>
@@ -95,17 +87,17 @@ Template Name: Who we Are
           <div class="container">
             <div class="contact-gallery-content">
                 <div class="contact-box">
-                    <h5>Contact Us Today</h5>
-                    <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
+                    <h5><?php  echo get_field('contact-title');?></h5>
+                    <?php  echo get_field('contact-desc');?>
                     <div class="btn-area">
-                        <a href="#">Contact Your Local Storm Guard Franchise</a>
-                        <a href="#">Contact the Storm Guard Corporate Office</a>
+                        <a href="#"><?php  echo get_field('contact-local-btn-text');?></a>
+                        <a href="#"><?php  echo get_field('contact-office-btn-text');?></a>
                     </div>
                 </div>
                 <div class="contact-gallery-wrap">
 
-                    <h5>Check Out Our Past Projects</h5>
-                    <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past.</p>
+                    <h5><?php  echo get_field('gallery-title');?></h5>
+                    <?php  echo get_field('gallery-desc');?>
                     <div class="contact-gallery-list">
                     <?php
                         $query = new WP_Query( [

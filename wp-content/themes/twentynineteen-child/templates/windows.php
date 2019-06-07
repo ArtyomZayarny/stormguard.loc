@@ -17,24 +17,11 @@ Template Name: Windows
         <hr>
         <article class="window-article">
             <div class="window-article__img">
-                <img src="/wp-content/uploads/2019/06/window_worker.png" alt="">
+                <img src="<?php echo get_field('article-img'); ?>" alt="">
             </div>
             <div class="window-article__text">
-                    <h5 class="red-title">Windows</h5>
-                    <p>The right windows can make your home – helping frame your home’s
-                     overall look and determine your level of energy efficiency. 
-                      no-obligation damage inspection will determine if your windows are damaged or
-                       leaky and in need of replacement.</p>
-
-                    <p>Our team of professionals handles and installs quality products from America’s most 
-                    trusted window and glass companies, such as Simonton Windows. Offering a lifetime manufacturer’s 
-                    warranty, Simonton Windows are available in a variety of styles and sizes, and are made from the highest 
-                    quality materials available today, including Low Emissivity (Low E) and Argon gas.</p>
-
-                    <p>Whether you choose windows that are wood or vinyl, single or double hung, our 
-                    Storm Guard team will install your new or replacement windows right the first time.
-                     You can always count on quality construction, premium aesthetics, and energy efficiency,
-                      all with the finish options and hardware you need for your application.</p>
+                    <h5 class="red-title"><?php echo get_field('article-title'); ?></h5>
+                    <?php echo get_field('article-desc'); ?>
             </div>
         
         </article>
@@ -76,7 +63,7 @@ Template Name: Windows
                         // Постов не найдено
                     }
                     
-                    wp_reset_postdata(); // Сбрасываем $post
+                    wp_reset_postdata(); 
                     ?>
                 </div><!-- #offers-box -->   
             </div><!-- # offers-content -->
@@ -86,35 +73,34 @@ Template Name: Windows
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h5 class="red-title">Ready To Get Started?</h4>
-                       <p>Damage to your home or business from a storm? 
-                        Looking to replace your old roof or siding? Get Started below!</p>
+                        <h5 class="red-title"><?php echo get_field('ready-title') ?></h4>
+                        <?php echo get_field('ready-desc') ?>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-first.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img') ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Residential</p>
+                                <p  class="text-with-arrow"><?php echo get_field('first-item-title') ?></p>
                             </div>
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-second.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img') ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Commercial </p>
+                                <p  class="text-with-arrow"><?php echo get_field('second-item-title') ?></p>
                             </div>
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('/wp-content/uploads/2019/06/get-start-third.png')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img') ?>')no-repeat center;background-size:cover;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
-                                <p  class="text-with-arrow">Insurance </p>
+                                <p  class="text-with-arrow"><?php echo get_field('third-item-title') ?></p>
                             </div>
                         </a>
                         <!-- #third item -->
@@ -129,15 +115,15 @@ Template Name: Windows
             <div class="container">
                 <div class="find-content">
                     <div class="find-content__icon">
-                    <img src="/wp-content/uploads/2019/06/find-icon.png" alt=""> 
+                    <img src="<?php echo get_field('franchise-icon') ?>g" alt=""> 
                     </div>
                     <div class="find-content__text">
-                        <h4>Find A Franchise Near You</h4>
-                        <p>Want to speak to us in person? Enter your zip code to find the nearest franchise.</p>
+                        <h4><?php echo get_field('franchise-title') ?></h4>
+                        <?php echo get_field('franchise-desc') ?>
                     </div>
                     <form action="#" >
-                        <p><input  class="find-input" type="text" placeholder="Zip code" required></p>
-                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="Submit"></p>
+                        <p><input  class="find-input" type="text" placeholder="<?php echo get_field('franchise-form-placeholder') ?>" required></p>
+                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="<?php echo get_field('franchise-btn-text') ?>"></p>
                     </form>
                    </div>
                 </div>
@@ -146,17 +132,16 @@ Template Name: Windows
           <div class="container">
             <div class="contact-gallery-content">
                 <div class="contact-box">
-                    <h5>Contact Us Today</h5>
-                    <p>Need more information about our services or insurance claims? Fill out the form below and representitive will be in touch!</p>
+                    <h5><?php echo get_field('contact-title') ?></h5>
+                    <?php echo get_field('contact-desc') ?>
                     <div class="btn-area">
-                        <a href="#">Contact Your Local Storm Guard Franchise</a>
-                        <a href="#">Contact the Storm Guard Corporate Office</a>
+                        <a href="#"><?php echo get_field('contact-local-btn-text') ?></a>
+                        <a href="#"><?php echo get_field('contact-office-btn-text') ?></a>
                     </div>
                 </div>
                 <div class="contact-gallery-wrap">
 
-                    <h5>Check Out Our Past Projects</h5>
-                    <p>Want to see examples of our past work? Check out the gallery below to see projects we have completed in the past. <a href="#">View the whole portfolio</a>.</p>
+                    <h5><?php echo get_field('gallery-desc') ?>
                     <div class="contact-gallery-list">
                     <?php
                         $query = new WP_Query( [
@@ -178,6 +163,7 @@ Template Name: Windows
                                 <?php
                             }
                         }
+                        wp_reset_postdata(); 
                             ?>
                             
                 </div><!--  #gallery list -->
