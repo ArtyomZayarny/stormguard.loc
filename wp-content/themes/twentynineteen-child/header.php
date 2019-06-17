@@ -36,7 +36,7 @@
 					</div>		
 			</div>
 		</div><!-- #header__top -->
-		<div class="header-bottom" style="background-color:rgba(0,0,0,0.6);">
+		<div class="header-bottom">
 			<div class="container">
 			<div class="header-bottom__content">
 			    <div class="header-bottom__content header-bottom__content__img">
@@ -47,7 +47,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'main-nav','container' => 'ul' ) );  ?>
 				 <!-- #main-nav-menu -->
 				 
-				 <span class="burger" style="font-size:30px;cursor:pointer;color:#fff;">☰</span>
+				 <span class="burger" >☰</span>
 			</div>
 			
 			</div>

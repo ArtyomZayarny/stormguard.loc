@@ -13,7 +13,7 @@
                 font-weight: 700;
                 &:after{
                     content:'';
-                    background: url('/wp-content/uploads/2019/06/topbar_arrow.png')no-repeat center;
+                    background: url('/wp-content/themes/twentynineteen-child/images/topbar_arrow.png')no-repeat center;
                     position: relative;
                     display: inline-block;
                     width: 10px;
@@ -54,6 +54,7 @@
         }
     }
     &-bottom{
+      background-color: rgba(0,0,0,0.6);
         margin-bottom:-82px;
         &__content{
             display: grid;
@@ -128,6 +129,12 @@
         flex-direction: column;
       }
 }
+
+  span.burger{
+    font-size:30px;
+    cursor:pointer;
+    color:#fff;
+  }
 
 .header-top__content ul.menu li.current-menu-item a{
     color:$red;

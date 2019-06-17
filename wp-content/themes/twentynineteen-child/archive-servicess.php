@@ -6,8 +6,9 @@
  */
 
 get_header();
+//banner window
 ?>
-<div class="banner" style="background:url('/wp-content/uploads/2019/06/window_banner.png')no-repeat center;background-size:cover; height:264px"></div>
+<div class="banner" style="background:url('<?php echo get_field('banner-img');  ?>')no-repeat center;"></div>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">

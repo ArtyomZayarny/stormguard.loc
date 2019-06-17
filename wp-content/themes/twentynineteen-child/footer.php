@@ -19,7 +19,7 @@
 	     <div class="container">
 			<div class="footer-content">
 				<div class="footer-content__copy">
-					<p>Copyright 2017. Storm Guard. All Rights Reserved. Website Produced by: <a href="#">Inverse Paradox</a></p>
+					<?php echo the_field('copyright-text','option'); ?>
 				</div>
 				<!-- footer  menu -->
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu','container' => 'ul' ) );  ?>

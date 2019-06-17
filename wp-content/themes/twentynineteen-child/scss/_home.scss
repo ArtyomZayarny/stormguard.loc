@@ -37,9 +37,8 @@
     
 }
 .find{
-
+    background-color: #ffdd00;
     &-content{
-      
         &__icon{
             margin-left:27px;
         }
@@ -56,7 +55,6 @@
         }
         .find-input{
             width: 100%;
-            //max-width: 259px;
             height:54px;
             font-size: 18px;
             padding:10px 15px;
@@ -104,6 +102,8 @@
                 display: flex;
                 justify-content:center;
                 align-items:center;
+                overflow: hidden;
+                background: #db302c;
             }
         }
     }
@@ -120,7 +120,9 @@
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-gap: 0 23px;
+
             &-item{
+                background-size: cover;
                 &__img{
                     max-height: 205px;
                     overflow: hidden;
@@ -146,29 +148,33 @@
         
     }
 }
-.slider-box{
-    .slick-dots li button { 
-        font-size: 0; 
-     } 
-
-    &__item{
-        &__text {
-            background: #fff;
-            padding: 27px 19px;
-            font-size: 20px;
-            p {
-                font-size: 20px;
-            }
+.slider-rewies {
+    background-color:#f7f8f8;
+    .slider-box {
+        .slick-dots li button {
+            font-size: 0;
         }
-        &__author-area {
-            padding-top: 13px;
-            &__name{
-                text-align: right;
+
+        &__item {
+            &__text {
+                background: #fff;
+                padding: 27px 19px;
+                font-size: 20px;
+                font-style: italic;
+                p {
+                    font-size: 20px;
+                }
+            }
+            &__author-area {
+                padding-top: 13px;
+                &__name {
+                    text-align: right;
+                    font-style: italic;
+                }
             }
         }
     }
 }
-
 .latest-news{
 
     .latest-news-content{
@@ -328,7 +334,5 @@
     .banner-section .banner-content__text h3 {
         font-size: 20px;
     }
-
-
   }
    

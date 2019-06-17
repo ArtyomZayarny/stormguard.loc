@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Who we Are
+Template Name: Who-we-are
 */
 
 ?>
 <?php get_header(); ?>
-<section class="banner" style="background:url('/wp-content/uploads/2019/06/how-we-are.png')no-repeat center;background-size:cover;height:264px"></section>
+<section class="banner" style="background:url('<?php  echo get_field('banner-img'); ?>')no-repeat center;"></section>
 <div class="container">
 <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
             <?php if(function_exists('bcn_display'))
@@ -19,22 +19,21 @@ Template Name: Who we Are
                 <img src="<?php echo get_field('article-img');?>" alt="">
             </div>
             <div class="window-article__text">
-                    <h5 class="red-title"><?php echo get_field('article-title');?></h5>
-                    <?php echo get_field('article-desc');?>
+                <h5 class="red-title"><?php echo get_field('article-title');?></h5>
+                <?php echo get_field('article-desc');?>
             </div>
-        
-        </article>
+</article>
 <hr>
 <section class="get-start">
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h5 class="red-title"><?php echo get_field('ready-title'); ?></h4>
+                        <h5 class="red-title"><?php echo get_field('ready-title'); ?></h5>
                         <?php echo get_field('ready-desc'); ?>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img');?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img');?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -43,7 +42,7 @@ Template Name: Who we Are
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img');?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img');?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -52,7 +51,7 @@ Template Name: Who we Are
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img');?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img');?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -66,7 +65,7 @@ Template Name: Who we Are
         </section><!-- #get-start -->
 
 </div><!-- #container -->
-<section class="find" style="background-color:#ffdd00;">
+<section class="find">
             <div class="container">
                 <div class="find-content">
                     <div class="find-content__icon">
@@ -78,7 +77,7 @@ Template Name: Who we Are
                     </div>
                     <form action="#" >
                         <p><input  class="find-input" type="text" placeholder="<?php echo get_field('franchise-form-placeholder'); ?>" required></p>
-                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="<?php echo get_field('franchise-btn-text'); ?>"></p>
+                        <p><input  class="find-submit"  type="submit" value="<?php echo get_field('franchise-btn-text'); ?>"></p>
                     </form>
                    </div>
                 </div>
@@ -110,21 +109,21 @@ Template Name: Who we Are
                             while ( $query->have_posts() ) {
                                 $query->the_post();
                                 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                                if (!$url) {
+                                    $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                                }
                                 ?>
                                 <a href="<?php  echo get_permalink(); ?>">
                                     <div class="contact-gallery-content__item">
                                         <img src="<?php echo $url; ?>" alt="">
                                     </div>
-                            </a>
+                                </a>
                                 <?php
                             }
                         }
                             ?>
-                            
                 </div><!--  #gallery list -->
               </div><!-- #gallery-content -->
             </div>
         </section><!-- #contact-gallery -->
-
-
 <?php get_footer(); ?>

@@ -29,14 +29,11 @@ a{
     }
 }
 select {
-    /* for Firefox */
     -moz-appearance: none;
-    /* for Chrome */
     -webkit-appearance: none;
   }
-  
-  /* For IE10 */
-  select::-ms-expand {
+
+select::-ms-expand {
     display: none;
   }
 .container{
@@ -51,21 +48,46 @@ section{
 hr{
     background-color: #d4d4d4;
 }
-/******************** FOOTER TO BOTTOM *************/
- 
 
+section.banner{
+    background-size: cover;
+    height: 264px;
+}
+/******************** FOOTER TO BOTTOM *************/
+body{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 55px;
+}
+@media(max-width:1200px){
+    body{
+        padding-bottom: 120px;
+    }
+}
+@media(max-width:475px){
+    body{
+        padding-bottom: 240px;
+    }
+}
+footer.footer{
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
 .text-with-arrow{
     display: block;
     &:after{
         content:'';
         display:inline-block;
-        background: url('/wp-content/uploads/2019/06/btn-arrow.png')no-repeat center;
+        background: url('/wp-content/themes/twentynineteen-child/images/btn-arrow.png')no-repeat center;
         background-size: cover;
         width:7px;
         height:10px;
         margin-left: 15px;
     }
 }
+
 /********************* RED TITLE ********************/
 .red-title{
     color:$red;
@@ -87,6 +109,7 @@ hr{
     }
 }
 
+
 /***************** SPAN YELLOW **********************/
 .yellow{
     color:$yellow;
@@ -106,48 +129,47 @@ hr{
     }
 } 
 /*********************     SLICK SLIDER DOTS        ******************************/
-.slick-dots li {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer;
-}
+.slick-dots {
+    display: flex;
+    justify-content: center;
 
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 14px;
-    height: 14px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
+    margin: 0;
+    padding: 1rem 0;
 
-.slick-dots li button:before {
-    content: '•';
-    font-size: 52px;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    opacity: .25;
-    color: black;
+    list-style-type: none;
+
+    li {
+        margin: 0 0.25rem;
+    }
+
+    button {
+        display: block;
+        width: 14px;
+        border: 1px solid #c4c4c4;
+        height: 14px;
+        padding: 0;
+        border-radius: 100%;
+        background-color: #fff;
+        text-indent: -9999px;
+        outline: none;
+    }
+
+    li.slick-active button {
+        background-color: #000;
+        outline: none;
+    }
+
 }
 ul.slick-dots {
     text-align: center;
 }
 li.slick-active button:before{
     color: black;
+}
+/**************** CONTACT FORM VALIDATION ************/
+
+span.wpcf7-not-valid-tip{
+    color:#000;
 }
 
 /************* BREADCRUMBS LINKS ******************/
@@ -196,6 +218,7 @@ li.slick-active button:before{
     &-content{
         padding: 31px 0;
         .find-submit{
+            background-color: #db302c;
             margin-left: 10px;
         }
     }
@@ -211,7 +234,7 @@ li.slick-active button:before{
     
 }
 
-/********************* FIND WITH BUTON *************/
+/********************* FIND WITH BUTTON *************/
 .find-content.with-btn {
     display: flex;
     justify-content: space-between;
@@ -327,7 +350,7 @@ a.fill-form{
                     content:'';
                     width:15px;
                     height:7px;
-                    background:url('/wp-content/uploads/2019/06/select_arrow.png')no-repeat center;
+                    background:url('/wp-content/themes/twentynineteen-child/images/select_arrow.png')no-repeat center;
                     background-size:cover;
                     display:inline-block;
                     position:absolute;

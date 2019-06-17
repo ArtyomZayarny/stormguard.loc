@@ -1,12 +1,11 @@
 <?php
 /*
-Template Name: Windows
+Template Name: Window
 */
 ?>
 <?php get_header(); ?>
  <div class="window-wrap">
-<section class="banner" style="background:url('/wp-content/uploads/2019/06/window_banner.png')no-repeat center;background-size:cover;height:264px"></section>
-  
+<section class="banner" style="background:url('<?php echo get_field('banner-img'); ?>')no-repeat center;"></section>
     <div class="container">
         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
             <?php if(function_exists('bcn_display'))
@@ -20,18 +19,16 @@ Template Name: Windows
                 <img src="<?php echo get_field('article-img'); ?>" alt="">
             </div>
             <div class="window-article__text">
-                    <h5 class="red-title"><?php echo get_field('article-title'); ?></h5>
-                    <?php echo get_field('article-desc'); ?>
+                <h5 class="red-title"><?php echo get_field('article-title'); ?></h5>
+                <?php echo get_field('article-desc'); ?>
             </div>
-        
         </article>
         <hr>
         <section class="offers">
           <div class="offers-content">
             <div class="heading">
-                <h5 class="red-title">View Our Other Services</h4>
-                <p>From home upgrades to storm restoration, Storm Guard offers 
-                a range of services to help you with your home.</p>
+                <h5 class="red-title"><?php echo get_field('offres-title'); ?></h5>
+                <?php echo get_field('offres-desc'); ?>
             </div><!-- #heading -->
             <div class="offers-box">
                     <?php
@@ -50,7 +47,7 @@ Template Name: Windows
                             ?>
                             <a href="<?php echo get_permalink(); ?>">
                                 <div class="offers-box-item"> 
-                                    <div class='offers-box-item__circle' style="background-color:#db302c;">
+                                    <div class='offers-box-item__circle'>
                                         <img src="<?php echo $url ?>" /> 
                                     </div>
                                     <h3><?php echo get_the_title();?></h3>
@@ -60,7 +57,9 @@ Template Name: Windows
                             <?php 
                         }
                     } else {
-                        // Постов не найдено
+                        ?>
+                        <p>You have no posts</p>
+                        <?php
                     }
                     
                     wp_reset_postdata(); 
@@ -73,12 +72,12 @@ Template Name: Windows
             <div class="container">
                 <div class="get-start-content">
                     <div class="heading">
-                        <h5 class="red-title"><?php echo get_field('ready-title') ?></h4>
+                        <h5 class="red-title"><?php echo get_field('ready-title') ?></h5>
                         <?php echo get_field('ready-desc') ?>
                     </div>
                     <div class="get-start-box">
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img') ?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('first-item-img') ?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -87,7 +86,7 @@ Template Name: Windows
                         </a>
                         <!-- #first item -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img') ?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('second-item-img') ?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -96,7 +95,7 @@ Template Name: Windows
                         </a>
                         <!-- #first second -->
                         <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img') ?>')no-repeat center;background-size:cover;">
+                            <div class="get-start-box-item" style="background:url('<?php echo get_field('third-item-img') ?>')no-repeat center;">
                                 <div class="get-start-box-item__img">
                                     <img src="" alt="">
                                 </div>
@@ -104,14 +103,12 @@ Template Name: Windows
                             </div>
                         </a>
                         <!-- #third item -->
-                        
-                    
                     </div>
                 </div>
             </div>
         </section><!-- #get-start -->
     </div><!-- #container -->
-        <section class="find" style="background-color:#ffdd00;">
+        <section class="find">
             <div class="container">
                 <div class="find-content">
                     <div class="find-content__icon">
@@ -123,7 +120,7 @@ Template Name: Windows
                     </div>
                     <form action="#" >
                         <p><input  class="find-input" type="text" placeholder="<?php echo get_field('franchise-form-placeholder') ?>" required></p>
-                        <p><input  class="find-submit" style="background-color:#db302c;" type="submit" value="<?php echo get_field('franchise-btn-text') ?>"></p>
+                        <p><input  class="find-submit"  type="submit" value="<?php echo get_field('franchise-btn-text') ?>"></p>
                     </form>
                    </div>
                 </div>
@@ -154,12 +151,15 @@ Template Name: Windows
                             while ( $query->have_posts() ) {
                                 $query->the_post();
                                 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                                if (!$url) {
+                                    $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                                }
                                 ?>
                                 <a href="<?php  echo get_permalink(); ?>">
                                     <div class="contact-gallery-content__item">
                                         <img src="<?php echo $url; ?>" alt="">
                                     </div>
-                            </a>
+                                </a>
                                 <?php
                             }
                         }

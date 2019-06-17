@@ -6,7 +6,7 @@ Template Name: Blog
 ?>
 
 <?php get_header(); ?>
-<div class="banner" style="background:url('/wp-content/uploads/2019/06/how-we-are.png')no-repeat center;background-size:cover;height:264px"></div>
+<div class="banner" style="background:url('<?php echo get_field('banner-img');?>')no-repeat center;"></div>
 <div class="container">
     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
                         <?php if(function_exists('bcn_display'))

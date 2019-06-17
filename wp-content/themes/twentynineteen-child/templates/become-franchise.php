@@ -1,17 +1,17 @@
 <?php
 /*
-Template Name: Become A Franchise
+Template Name: Franchise
 */
 
 ?>
 <?php get_header(); ?>
-<section class=banner style="background:url('/wp-content/uploads/2019/06/how-we-are-banner@2x.png')no-repeat center;background-size:cover;height:264px;"></section>
+<section class=banner style="background:url('<?php echo get_field('banner-img'); ?>')no-repeat center;"></section>
 <div class="container">
     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
-                <?php if(function_exists('bcn_display'))
-                {
-                    bcn_display();
-                }?>
+        <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }?>
     </div><!-- #breadcrumbs -->
     <hr>
     <section class="franchise">
@@ -24,19 +24,17 @@ Template Name: Become A Franchise
                             <h5 class="red-title"><?php echo get_field('who-we-are'); ?></h5>
                             <?php echo get_field('who-we-are-desc'); ?>
                         </div> 
-                            <div class="text-img__img">
-                                <img src="<?php echo get_field('franchise-img'); ?>" alt="">
-                            </div>
-
+                        <div class="text-img__img">
+                            <img src="<?php echo get_field('franchise-img'); ?>" alt="">
+                        </div>
                 </div>
                 <?php echo get_field('franchise-text'); ?>
             </article>
             </div>
     </section>
-    <section class="find" style="background-color:#ffdd00;">
+    <section class="find" >
         <div class="container">
             <div class="find-content with-btn">
-                
                 <div class="find-content__text">
                     <h4><?php echo get_field('become-title'); ?></h4>
                     <?php echo get_field('become-desc'); ?>
@@ -57,7 +55,6 @@ Template Name: Become A Franchise
                 </div>
             </div>
             <div class="contact-gallery-wrap">
-
                 <h5><?php echo get_field('gallery-title'); ?></h5>
                 <?php echo get_field('gallery-desc'); ?>
                 <div class="contact-gallery-list">
@@ -72,12 +69,15 @@ Template Name: Become A Franchise
                         while ( $query->have_posts() ) {
                             $query->the_post();
                             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                            if (!$url) {
+                                $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                            }
                             ?>
                             <a href="<?php  echo get_permalink(); ?>">
                                 <div class="contact-gallery-content__item">
                                     <img src="<?php echo $url; ?>" alt="">
                                 </div>
-                        </a>
+                            </a>
                             <?php
                         }
                     }
@@ -88,14 +88,4 @@ Template Name: Become A Franchise
         </div>
     </section>
 </div>
- 
-
-
-
-
-
-
-
-
-
 <?php  get_footer(); ?>

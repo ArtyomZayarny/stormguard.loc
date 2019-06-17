@@ -6,12 +6,11 @@ Template Name: Home page template
 
 <?php get_header(); ?>
 
-<section class="banner-section" style="background:url('<?php echo get_field('banner-img'); ?>')no-repeat center; background-size:cover">
+<section class="banner-section" style="background:url('<?php echo get_field('banner-img'); ?>')no-repeat center;">
     <div class="container">
        <div class="banner-content">
            <div class="banner-content__text">
                 <?php echo get_field('banner-text'); ?>
-               
            </div>
             <a href="#" class="yellow-btn">
                 <span class="text-with-arrow"><?php echo get_field('banner-btn-text'); ?></span>
@@ -19,7 +18,7 @@ Template Name: Home page template
        </div>
     </div>
 </section>
-<section class="find" style="background-color:#ffdd00;">
+<section class="find">
     <div class="container">
         <div class="find-content">
             <div class="find-content__icon">
@@ -41,8 +40,8 @@ Template Name: Home page template
     <div class="container">
         <div class="offers-content">
             <div class="heading">
-                <h4><?php echo get_field('services-title'); ?></h4>
-                <?php echo get_field('services-desc'); ?>
+                <h4><?php echo get_field('offres-title'); ?></h4>
+                <?php echo get_field('offres-desc'); ?>
             </div>
             <div class="offers-box">
             <?php
@@ -58,10 +57,13 @@ Template Name: Home page template
                 while ( $query->have_posts() ) {
                     $query->the_post();
                     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                    if (!$url) {
+                        $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                    }
                     ?>
                     <a href="<?php echo get_permalink() ?>">
                         <div class="offers-box-item"> 
-                            <div class='offers-box-item__circle' style="background-color:#db302c;">
+                            <div class='offers-box-item__circle' >
                                 <img src="<?php echo $url ?>" /> 
                             </div>
                             <h3><?php echo get_the_title();?></h3>
@@ -71,10 +73,11 @@ Template Name: Home page template
                     <?php 
                 }
             } else {
-                // Постов не найдено
+                ?>
+                <p>You have no posts to display </p>
+                <?php
             }
-            
-            wp_reset_postdata(); // Сбрасываем $post
+            wp_reset_postdata();
             ?>
             </div><!-- #offers-box -->
             <a href="#" class="yellow-btn">View All Services</a>
@@ -82,47 +85,46 @@ Template Name: Home page template
     </div>
 </section>
 <section class="get-start">
-            <div class="container">
-                <div class="get-start-content">
-                    <div class="heading">
-                        <h5 class="red-title"><?php echo get_field('get-start-title');?></h4>
-                       <?php  echo get_field('get-start-desc'); ?>
-                    </div>
-                    <div class="get-start-box">
-                        <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo the_field('first-item-img'); ?>')no-repeat center;background-size:cover;">
-                                <div class="get-start-box-item__img">
-                                    <img src="" alt="">
-                                </div>
-                                <p  class="text-with-arrow">
-                                
-                                <?php echo the_field('first-item-title'); ?></p>
-                            </div>
-                        </a>
-                        <!-- #first item -->
-                        <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo the_field('second-item-img'); ?>')no-repeat center;background-size:cover;">
-                                <div class="get-start-box-item__img">
-                                    <img src="" alt="">
-                                </div>
-                                <p  class="text-with-arrow"><?php echo the_field('second-item-title'); ?></p>
-                            </div>
-                        </a>
-                        <!-- #first second -->
-                        <a href="#">
-                            <div class="get-start-box-item" style="background:url('<?php echo the_field('third-item-img'); ?>')no-repeat center;background-size:cover;">
-                                <div class="get-start-box-item__img">
-                                    <img src="" alt="">
-                                </div>
-                                <p  class="text-with-arrow"><?php echo the_field('third-item-title'); ?></p>
-                            </div>
-                        </a>
-                        <!-- #third item -->
-                    </div>
-                </div>
+    <div class="container">
+        <div class="get-start-content">
+            <div class="heading">
+                <h5 class="red-title"><?php echo get_field('get-start-title');?></h5>
+               <?php  echo get_field('get-start-desc'); ?>
             </div>
-        </section><!-- #get-start -->
-<section class="slider-rewies" style="background-color:#f7f8f8;">
+            <div class="get-start-box">
+                <a href="#">
+                    <div class="get-start-box-item" style="background:url('<?php echo the_field('first-item-img'); ?>')no-repeat center;">
+                        <div class="get-start-box-item__img">
+                            <img src="" alt="">
+                        </div>
+                        <p  class="text-with-arrow">
+                        <?php echo the_field('first-item-title'); ?></p>
+                    </div>
+                </a>
+                <!-- #first item -->
+                <a href="#">
+                    <div class="get-start-box-item" style="background:url('<?php echo the_field('second-item-img'); ?>')no-repeat center;">
+                        <div class="get-start-box-item__img">
+                            <img src="" alt="">
+                        </div>
+                        <p  class="text-with-arrow"><?php echo the_field('second-item-title'); ?></p>
+                    </div>
+                </a>
+                <!-- #first second -->
+                <a href="#">
+                    <div class="get-start-box-item" style="background:url('<?php echo the_field('third-item-img'); ?>')no-repeat center;">
+                        <div class="get-start-box-item__img">
+                            <img src="" alt="">
+                        </div>
+                        <p  class="text-with-arrow"><?php echo the_field('third-item-title'); ?></p>
+                    </div>
+                </a>
+                <!-- #third item -->
+            </div>
+        </div>
+    </div>
+</section><!-- #get-start -->
+<section class="slider-rewies">
    <div class="container">
    <div class="heading">
                 <h4><?php echo get_field('what-client-say-title');?></h4>
@@ -187,13 +189,17 @@ Template Name: Home page template
             $query = new WP_Query( [
                 'post_type'      =>'post',
                 'posts_per_page' => 3,
-                'orderby'        => 'comment_count',
+                'orderby' => 'publish_date',
+                'order' => 'DESC'
             ] );
 
             if ( $query->have_posts() ) {
                 while ( $query->have_posts() ) {
                     $query->the_post();
                     $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                    if (!$url) {
+                        $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                    }
                     ?>
                     <div class='news-item'>
                         <div class="news-item__img">
@@ -240,6 +246,9 @@ Template Name: Home page template
                         while ( $query->have_posts() ) {
                             $query->the_post();
                             $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                            if (!$url) {
+                                $url = '/wp-content/themes/twentynineteen-child/images/no-image.png';
+                            }
                             ?>
                             <a href="<?php  echo get_permalink(); ?>">
                                 <div class="contact-gallery-content__item">
@@ -257,7 +266,4 @@ Template Name: Home page template
         </div><!--contact-gallery-content -->
   </div><!-- #content -->
 </section>
-
-
-
-<?php  get_footer();  ?>
+<?php get_footer();  ?>
